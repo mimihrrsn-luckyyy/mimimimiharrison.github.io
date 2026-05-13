@@ -161,7 +161,18 @@
   display:flex;
   flex-direction:column;
 }
+    
+@media (max-width: 1400px){
+  .cards{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
 
+@media (max-width: 900px){
+  .cards{
+    grid-template-columns:1fr;
+  }
+}
 
   .card h3{
     font-family:"Mr Bedfort", cursive;
