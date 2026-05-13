@@ -86,18 +86,15 @@
   font-family:"Great Vibes", cursive;
 
   font-size: clamp(5rem, 10vw, 9rem);
-
-  font-weight:400;
-
   letter-spacing:2px;
 
   background: linear-gradient(
     to bottom,
     #fff8d6 0%,
-    #ffe88a 18%,
-    #f3cf58 38%,
-    #c89a2b 55%,
-    #fff0a8 72%,
+    #ffe88a 20%,
+    #f3cf58 40%,
+    #c89a2b 60%,
+    #fff0a8 80%,
     #a97816 100%
   );
 
@@ -106,20 +103,23 @@
 
   text-shadow:
 
-    /* glossy top highlight */
-    0px -1px 0px rgba(255,255,220,0.9),
+    /* TOP ICE GLOSS */
+    0 -3px 0 rgba(255,255,255,0.95),
 
-    /* soft puffy thickness */
-    1px 1px 0px #d4a93a,
-    2px 2px 0px #c18d22,
-    3px 3px 0px #9f6f12,
+    /* PUFF DEPTH STACK (main effect) */
+    1px 1px 0 #e6b94a,
+    2px 2px 0 #d6a43a,
+    3px 3px 0 #c08f2a,
+    4px 4px 0 #a87318,
+    5px 5px 0 #7d550f,
+    6px 6px 0 #5a3b09,
 
-    /* soft outer bloom */
-    0 0 8px rgba(255,230,120,0.55),
-    0 0 18px rgba(255,220,90,0.35),
+    /* SOFT SHADOW UNDER BASE */
+    7px 7px 10px rgba(0,0,0,0.25),
 
-    /* cinematic shadow */
-    5px 5px 12px rgba(0,0,0,0.22);
+    /* DREAMY GLOW */
+    0 0 12px rgba(255,230,120,0.5),
+    0 0 25px rgba(255,210,90,0.35);
 
   filter: blur(0.25px);
 
