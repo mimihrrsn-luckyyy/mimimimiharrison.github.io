@@ -93,23 +93,35 @@
 
   background: linear-gradient(
     to bottom,
-    #fff8c9 0%,
-    #f7df72 20%,
-    #caa93d 45%,
-    #fff3a6 60%,
-    #b38728 100%
+    #fff8d6 0%,
+    #ffe88a 18%,
+    #f3cf58 38%,
+    #c89a2b 55%,
+    #fff0a8 72%,
+    #a97816 100%
   );
 
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 
   text-shadow:
-    0 0 2px rgba(255,245,180,0.9),
-    0 0 6px rgba(255,225,120,0.5),
-    2px 2px 3px rgba(120,90,0,0.35),
-    4px 4px 12px rgba(0,0,0,0.2);
 
-  filter: blur(0.2px);
+    /* glossy top highlight */
+    0px -1px 0px rgba(255,255,220,0.9),
+
+    /* soft puffy thickness */
+    1px 1px 0px #d4a93a,
+    2px 2px 0px #c18d22,
+    3px 3px 0px #9f6f12,
+
+    /* soft outer bloom */
+    0 0 8px rgba(255,230,120,0.55),
+    0 0 18px rgba(255,220,90,0.35),
+
+    /* cinematic shadow */
+    5px 5px 12px rgba(0,0,0,0.22);
+
+  filter: blur(0.25px);
 
   transform: rotate(-1deg);
 }
