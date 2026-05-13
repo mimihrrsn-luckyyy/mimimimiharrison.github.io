@@ -167,26 +167,26 @@
 .cards{
   width: 100%;
   margin-top: -140px;
-  padding: 60px 8% 100px;
+  padding: 60px 3% 100px;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
 
   justify-items: center;
   align-items: start;
 }
     
 .card{
+  position: relative;
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: center;   /* horizontal centering */
+  align-items: flex-end;     /* pushes text downward */
 
   width: 100%;
   max-width: 504px;
   aspect-ratio: 504 / 312;
-
-  padding: 40px 60px;
 
   background: url("envelope.png") no-repeat center;
   background-size: 100% 100%;
@@ -194,8 +194,17 @@
   text-decoration: none;
   color: inherit;
 
+  padding: 0 40px 50px; /* bottom padding controls "below seal V" */
+
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.card-content{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
   
 .card{
