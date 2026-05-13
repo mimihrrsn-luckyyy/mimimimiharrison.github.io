@@ -129,37 +129,36 @@
 
 .hero p{
   font-family:"Great Vibes", cursive;
-  color:#F7B5DB;
+  color: #F7B5DB;
 
-  font-size:2.3rem;
-  letter-spacing:2px;
-  line-height:1.3;
+  font-size: 2.3rem;
+  line-height: 1.3;
+  letter-spacing: 2px;
 
-  /* keep your base look */
-  background: linear-gradient(to bottom, #ffd6ea, #f7b5db, #d97aa8);
+  background: linear-gradient(
+    to bottom,
+    #ffd1e8 0%,
+    #f7b5db 40%,
+    #d87aa7 100%
+  );
+
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 
   text-shadow:
+    0px -1px 0px rgba(255,240,250,0.9),
+    1px 1px 0px rgba(150,60,110,0.25),
+    2px 2px 4px rgba(0,0,0,0.15),
 
-    /* TOP GLOSS (fake icing shine) */
-    0 -2px 0 rgba(255,255,255,0.9),
+    0 0 8px rgba(255,180,220,0.35);
+}
 
-    /* PUFF BODY (this is the key) */
-    1px 1px 0 #e48bb7,
-    2px 2px 0 #d06aa0,
-    3px 3px 0 #b24a82,
-    4px 4px 0 #8f2f61,
-
-    /* SOFT ROUNDING */
-    5px 5px 6px rgba(0,0,0,0.15),
-
-    /* GLOW */
-    0 0 10px rgba(255,170,210,0.4);
-
-  filter: blur(0.2px);
-
-  -webkit-text-stroke: 0.3px rgba(255,240,250,0.35);
+.hero p{
+  text-shadow:
+    0px -1px 0px rgba(255,245,250,0.9),
+    1px 1px 0px rgba(160,80,120,0.25),
+    2px 2px 0px rgba(120,50,90,0.2),
+    0 0 10px rgba(255,170,210,0.35);
 }
     
     <!--.buttons{
