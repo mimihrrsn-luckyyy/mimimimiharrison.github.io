@@ -195,23 +195,34 @@
   align-items:start;
 }
     
-
 .card{
-  background:url("oldpost.png") no-repeat center;
-  background-size:100% 100%;
+  display:block;
+  text-decoration:none;
+  color:inherit;
+
+  background: url("oldpost.png") no-repeat center;
+  background-size: 100% 100%;
 
   width:420px;
   height:260px;
 
-  padding-top:60px;
-  padding-left:60px;
+  padding-top:75px;
+  padding-left:70px;
   padding-right:45px;
+}
 
-  border:none;
-  box-shadow:none;
+.card{
+  cursor:pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
 
-  display:flex;
-  flex-direction:column;
+.card:hover{
+  transform: translateY(-4px) rotate(-0.5deg);
+  filter: brightness(1.05);
+}
+
+.card:active{
+  transform: translateY(0px) scale(0.98);
 }
     
 @media (max-width: 1400px){
@@ -280,35 +291,25 @@
     <p>
      summer 2026
     </p>
-
-    <div class="buttons">
-      <a class="btn primary" href="#">hi im button</a>
-      <a class="btn secondary" href="#">github</a>
-    </div>
+    
   </section>
 
-  <section class="cards">
+ <section class="cards">
 
-    <div class="card">
-      <h3>Projects</h3>
-      <p>
-        things.
-      </p>
-    </div>
+  <a class="card" href="projects.html">
+    <h3>Projects</h3>
+    <p>things.</p>
+  </a>
 
-    <div class="card">
-      <h3>Photo Journal</h3>
-      <p>
-        uh.
-      </p>
-    </div>
+  <a class="card" href="gallery.html">
+    <h3>pics n things</h3>
+    <p>pics.</p>
+  </a>
 
-    <div class="card">
-      <h3>Interests</h3>
-      <p>
-        who knows.
-      </p>
-    </div>
+  <a class="card" href="interests.html">
+    <h3>Interests</h3>
+    <p>who knows.</p>
+  </a>
 
   </section>
 
