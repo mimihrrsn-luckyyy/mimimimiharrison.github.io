@@ -137,43 +137,74 @@
       transform:translateY(-3px);
     }
 
-    .cards{
-      font-family: "Special Elite", system-ui;
-      color: #7df9ff;
-      width:100%;
-      padding:40px 8% 100px;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
+.btn{
+  border-radius:4px;
+  font-family:"Special Elite", monospace;
+  letter-spacing:1px;
 
-    .card{
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:24px;
-      padding:30px;
-      backdrop-filter:blur(12px);
-      transition:0.3s;
-    }
+  border:2px solid rgba(255,240,220,0.4);
 
-    .card:hover{
-      transform:translateY(-8px);
-      background:rgba(255,255,255,0.09);
-    }
+  background:rgba(245,229,201,0.18);
+  color:#FFFFE8;
 
-    .card h3{
-      font-family: "Mr Bedfort", cursive;
-      color: #FFFFE8;
-      margin-bottom:15px;
-      font-size:2.3rem;
-    }
+  box-shadow:6px 6px 0px rgba(0,0,0,0.25);
 
-    .card p{
-      font-family: "Special Elite", system-ui;
-      color: #FFFFE8;
-      opacity:0.8;
-      line-height:1.7;
-    }
+  backdrop-filter:blur(4px);
+}
+
+.btn:hover{
+  transform:translate(-2px,-2px);
+}
+
+
+.cards{
+  width:100%;
+  padding:40px 8% 100px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+  gap:30px;
+}
+
+
+.card{
+  background:rgba(245,229,201,0.18);
+
+  border:2px solid rgba(255,240,220,0.35);
+
+  border-radius:6px;
+
+  backdrop-filter:blur(4px);
+
+  box-shadow:8px 8px 0px rgba(0,0,0,0.2);
+
+  padding:30px;
+}
+
+
+.card h3{
+  font-family:"Mr Bedfort", cursive;
+
+  color:#FFFFE8;
+
+  margin-bottom:15px;
+
+  font-size:2.3rem;
+
+  letter-spacing:1px;
+}
+
+
+.card p{
+  font-family:"Special Elite", monospace;
+
+  color:#FFFFE8;
+
+  line-height:1.7;
+
+  font-size:1rem;
+}
 
     footer{
       font-family: "Mr Bedfort", cursive;
@@ -183,6 +214,7 @@
       opacity:0.5;
       font-size:0.9rem;
     }
+    
   </style>
 </head>
 
