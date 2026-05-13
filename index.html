@@ -165,38 +165,39 @@
     
 
 .cards{
-  width:100%;
-  margin-top:-140px;
-  padding:60px 8% 100px;
+  width: 100%;
+  margin-top: -140px;
+  padding: 60px 8% 100px;
 
-  display:grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 
-  grid-template-columns:repeat(3, auto);
-
-  gap:40px;
-
-  justify-content:center;
-
-  align-items:start;
+  justify-items: center;
+  align-items: start;
 }
     
 .card{
-  display:block;
-  text-decoration:none;
-  color:inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 504px;
+  aspect-ratio: 504 / 312;
+
+  padding: 40px 60px;
 
   background: url("envelope.png") no-repeat center;
   background-size: 100% 100%;
 
-  width:504px;
-  height:312px;
+  text-decoration: none;
+  color: inherit;
 
-  padding-top:90px;
-  padding-left:70px;
-  padding-right:45px;
-  justify-content:center;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
-
+  
 .card{
   cursor:pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
@@ -225,18 +226,15 @@
 
 
 
-  .card h3{
-    font-family:"Great Vibes", cursive;
+ .card h3{
+  font-family:"Great Vibes", cursive;
+  color:#8F0425;
 
-    color:#8F0425;
+  margin: 0 0 10px 0;
 
-    margin-bottom:15px;
-    margin-top:80px; 
-
-    font-size:2.3rem;
-
-    letter-spacing:1px;
-  }
+  font-size:2.3rem;
+  letter-spacing:1px;
+}
 
 
   .card p{
