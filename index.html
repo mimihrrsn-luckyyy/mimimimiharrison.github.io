@@ -108,103 +108,75 @@
       flex-wrap:wrap;
     }
 
-    .btn{
-      padding:14px 28px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:600;
-      transition:0.3s ease;
-    }
 
-    .primary{
-      background:white;
-      color:black;
-    }
+  .btn{
+    border-radius:4px;
+    font-family:"Special Elite", monospace;
+    letter-spacing:1px;
 
-    .primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 30px rgba(255,255,255,0.2);
-    }
+    border:2px solid rgba(255,240,220,0.4);
 
-    .secondary{
-      border:1px solid rgba(255,255,255,0.3);
-      color:white;
-      backdrop-filter:blur(10px);
-    }
+    background:rgba(245,229,201,0.18);
+    color:#FFFFE8;
 
-    .secondary:hover{
-      background:rgba(255,255,255,0.08);
-      transform:translateY(-3px);
-    }
+    box-shadow:6px 6px 0px rgba(0,0,0,0.25);
 
-.btn{
-  border-radius:4px;
-  font-family:"Special Elite", monospace;
-  letter-spacing:1px;
+    backdrop-filter:blur(4px);
+  }
 
-  border:2px solid rgba(255,240,220,0.4);
-
-  background:rgba(245,229,201,0.18);
-  color:#FFFFE8;
-
-  box-shadow:6px 6px 0px rgba(0,0,0,0.25);
-
-  backdrop-filter:blur(4px);
-}
-
-.btn:hover{
-  transform:translate(-2px,-2px);
-}
+  .btn:hover{
+    transform:translate(-2px,-2px);
+  }
 
 
-.cards{
-  width:100%;
-  padding:40px 8% 100px;
+  .cards{
+    width:100%;
+    padding:40px 8% 100px;
 
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-  gap:30px;
-}
-
-
-.card{
-  background:rgba(245,229,201,0.18);
-
-  border:2px solid rgba(255,240,220,0.35);
-
-  border-radius:6px;
-
-  backdrop-filter:blur(4px);
-
-  box-shadow:8px 8px 0px rgba(0,0,0,0.2);
-
-  padding:30px;
-}
+    gap:30px;
+  }
 
 
-.card h3{
-  font-family:"Mr Bedfort", cursive;
+  .card{
+    background:rgba(245,229,201,0.18);
 
-  color:#FFFFE8;
+    border:2px solid rgba(255,240,220,0.35);
 
-  margin-bottom:15px;
+    border-radius:6px;
 
-  font-size:2.3rem;
+    backdrop-filter:blur(4px);
 
-  letter-spacing:1px;
-}
+    box-shadow:8px 8px 0px rgba(0,0,0,0.2);
+
+    padding:30px;
+  }
 
 
-.card p{
-  font-family:"Special Elite", monospace;
+  .card h3{
+    font-family:"Mr Bedfort", cursive;
 
-  color:#FFFFE8;
+    color:#FFFFE8;
 
-  line-height:1.7;
+    margin-bottom:15px;
 
-  font-size:1rem;
-}
+    font-size:2.3rem;
+
+    letter-spacing:1px;
+  }
+
+
+  .card p{
+    font-family:"Special Elite", monospace;
+
+    color:#FFFFE8;
+
+    line-height:1.7;
+
+    font-size:1rem;
+  }
 
     footer{
       font-family: "Mr Bedfort", cursive;
