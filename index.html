@@ -83,18 +83,35 @@
 
   
 .hero h1{
-  font-family:"Mr Bedfort", cursive;
+  font-family:"Great Vibes", cursive;
 
-  color:#f7b5db;
+  font-size: clamp(5rem, 10vw, 9rem);
+
+  font-weight:400;
+
+  letter-spacing:2px;
+
+  background: linear-gradient(
+    to bottom,
+    #fff8c9 0%,
+    #f7df72 20%,
+    #caa93d 45%,
+    #fff3a6 60%,
+    #b38728 100%
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 
   text-shadow:
-    0 1px 0 #ffd7ea,
-    1px 0 0 #ffd7ea,
-    -1px 0 0 #c96f99,
-    0 -1px 0 #c96f99,
+    0 0 2px rgba(255,245,180,0.9),
+    0 0 6px rgba(255,225,120,0.5),
+    2px 2px 3px rgba(120,90,0,0.35),
+    4px 4px 12px rgba(0,0,0,0.2);
 
-    2px 2px 0 #a94d75,
-    3px 3px 4px rgba(0,0,0,0.3);
+  filter: blur(0.2px);
+
+  transform: rotate(-1deg);
 }
     
     .hero p{
