@@ -71,19 +71,26 @@
       flex-wrap:wrap;
     }
 
-    .card{
-      width:320px;
+.card{
+  width:340px;
 
-      padding:40px 30px;
+  background:#f6dfd3;
 
-      background:url("wood.png") center/cover no-repeat;
+  border:2px solid #b96d79;
 
-      text-decoration:none;
+  padding:45px 30px;
 
-      transition:
-        transform 0.25s ease,
-        filter 0.25s ease;
-    }
+  text-decoration:none;
+
+  position:relative;
+
+  box-shadow:
+    0 8px 0 rgba(120,50,60,0.15);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
 
     .card:hover{
       transform:translateY(-6px) scale(1.02);
