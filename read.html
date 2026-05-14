@@ -1,53 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Babylonica&family=Castoro+Titling&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dr+Sugiyama&family=Eagle+Lake&family=Great+Vibes&family=Ingrid+Darling&family=Jacques+Francois+Shadow&family=Kapakana:wght@300..400&family=Luxurious+Script&family=Mr+Bedfort&family=Niconne&family=Pinyon+Script&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Puppies+Play&family=Rock+3D&family=Special+Elite&family=Stalemate&display=swap" rel="stylesheet">  <style>
-  <title>Reading List</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Summer Reading</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <style>
+
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
     }
 
-  <style>
-    
     body{
-       font-family:"Special Elite", system-ui;
-      margin:0;
-
       min-height:100vh;
-      overflow-x:hidden;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
 
-      background: url("whitepapercrump.jpg") center/cover no-repeat fixed;
+      background:
+        linear-gradient(rgba(10,10,10,0.22), rgba(10,10,10,0.22)),
+        url("scmp_bird_and_crane.jpg") center/cover fixed;
 
-      font-family:Georgia, serif;
+      font-family:"Special Elite", monospace;
+
+      color:#fff7ef;
+
+      padding:80px 20px;
+    }
+
+    .page{
+      width:min(900px, 100%);
+      margin:auto;
     }
 
     h1{
-      font-size:4rem;
-      margin-bottom:20px;
+      font-family:"Great Vibes", cursive;
+
+      font-size:5rem;
+      font-weight:400;
+
+      text-align:center;
+
+      margin-bottom:70px;
+
+      color:#ffd7e8;
+
+      text-shadow:
+        0 0 10px rgba(255,220,230,0.45),
+        0 0 30px rgba(255,190,220,0.25);
     }
 
-    a{
-      color:black;
-      text-decoration:none;
-      font-size:1.2rem;
+    .book{
+      display:flex;
+      gap:35px;
+
+      align-items:flex-start;
+
+      margin-bottom:55px;
+
+      padding:24px;
+
+      background:rgba(255,248,240,0.10);
+
+      border:1px solid rgba(255,255,255,0.14);
+
+      backdrop-filter:blur(5px);
+
+      box-shadow:
+        0 0 25px rgba(255,240,220,0.08),
+        0 8px 30px rgba(0,0,0,0.18);
+
+      border-radius:8px;
     }
-    
+
+    .book img{
+      width:130px;
+
+      border-radius:3px;
+
+      box-shadow:
+        0 8px 18px rgba(0,0,0,0.35);
+    }
+
+    .info h2{
+      font-family:"Great Vibes", cursive;
+
+      font-size:2.7rem;
+      font-weight:400;
+
+      color:#ffd7e8;
+
+      margin-bottom:10px;
+
+      text-shadow:
+        0 0 8px rgba(255,220,230,0.25);
+    }
+
+    .author{
+      opacity:0.72;
+
+      margin-bottom:16px;
+
+      letter-spacing:1px;
+    }
+
+    .notes{
+      line-height:1.7;
+
+      color:#fff5ef;
+
+      opacity:0.88;
+    }
+
+    .home{
+      display:block;
+
+      width:fit-content;
+
+      margin:70px auto 0;
+
+      color:#ffe6ef;
+
+      text-decoration:none;
+
+      font-size:1rem;
+
+      opacity:0.75;
+    }
+
+    .home:hover{
+      opacity:1;
+    }
+
+    @media (max-width:700px){
+
+      .book{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+      }
+
+      .book img{
+        width:170px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-  <h1>When I'm bored I'll Read</h1>
+  <div class="page">
 
-  <a href="index.html">← Back Home</a>
+    <h1>Summer Reading</h1>
+
+    <div class="book">
+
+      <img src="book1.jpg" alt="Book Cover">
+
+      <div class="info">
+        <h2>The Bell Jar</h2>
+
+        <div class="author">
+          Sylvia Plath
+        </div>
+
+        <div class="notes">
+          sad girls in summer etc etc
+        </div>
+      </div>
+
+    </div>
+
+    <div class="book">
+
+      <img src="book2.jpg" alt="Book Cover">
+
+      <div class="info">
+        <h2>Norwegian Wood</h2>
+
+        <div class="author">
+          Haruki Murakami
+        </div>
+
+        <div class="notes">
+          jazz cigarettes melancholy probably
+        </div>
+      </div>
+
+    </div>
+
+    <div class="book">
+
+      <img src="book3.jpg" alt="Book Cover">
+
+      <div class="info">
+        <h2>On the Road</h2>
+
+        <div class="author">
+          Jack Kerouac
+        </div>
+
+        <div class="notes">
+          american summer drifting feeling
+        </div>
+      </div>
+
+    </div>
+
+    <a class="home" href="index.html">
+      ← back home
+    </a>
+
+  </div>
 
 </body>
 </html>
