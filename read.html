@@ -23,7 +23,7 @@
       min-height:100vh;
 
       background:
-        linear-gradient(rgba(10,10,10,0.22), rgba(10,10,10,0.22)),
+        linear-gradient(rgba(255,255,255,0.08), rgba(255,255,255,0.08)),
         url("whitepapercrump.jpg") center/cover fixed;
 
       font-family:"Special Elite", monospace;
@@ -46,26 +46,32 @@
 
       text-align:center;
 
-      margin-bottom:70px;
+      margin-bottom:15px;
 
-      color:#ffd7e8;
+      color:#8F0425;
 
       text-shadow:
-        0 0 10px rgba(255,220,230,0.45),
-        0 0 30px rgba(255,190,220,0.25);
+        0 0 10px rgba(255,220,230,0.25),
+        0 0 30px rgba(255,190,220,0.15);
     }
 
-    p{
-      font-family:"Special Elite", system-ui;
-      min-height:100vh;
-      font-size: 2.3rem;
-      line-height: 1.3;
-      letter-spacing: 2px;
-      overflow-x:hidden; color:#8F0425;
+    .subtitle{
+      text-align:center;
+
+      font-size:1rem;
+
+      letter-spacing:1px;
+
+      margin-bottom:60px;
+
+      color:#8F0425;
+
+      opacity:0.75;
     }
 
     .book{
       display:flex;
+
       gap:35px;
 
       align-items:flex-start;
@@ -74,26 +80,26 @@
 
       padding:24px;
 
-      background:rgba(255,248,240,0.10);
+      background:rgba(255,248,240,0.38);
 
-      border:1px solid rgba(255,255,255,0.14);
+      border:1px solid rgba(143,4,37,0.10);
 
-      backdrop-filter:blur(5px);
+      backdrop-filter:blur(4px);
 
       box-shadow:
         0 0 25px rgba(255,240,220,0.08),
-        0 8px 30px rgba(0,0,0,0.18);
+        0 8px 30px rgba(0,0,0,0.08);
 
-      border-radius:8px;
+      border-radius:10px;
     }
 
     .book img{
       width:130px;
 
-      border-radius:3px;
+      border-radius:4px;
 
       box-shadow:
-        0 8px 18px rgba(0,0,0,0.35);
+        0 8px 18px rgba(0,0,0,0.22);
     }
 
     .info h2{
@@ -102,28 +108,32 @@
       font-size:2.7rem;
       font-weight:400;
 
-      color:#ffd7e8;
+      color:#8F0425;
 
       margin-bottom:10px;
 
       text-shadow:
-        0 0 8px rgba(255,220,230,0.25);
+        0 0 8px rgba(255,220,230,0.15);
     }
 
     .author{
-      opacity:0.72;
+      opacity:0.7;
 
       margin-bottom:16px;
 
       letter-spacing:1px;
+
+      font-size:0.95rem;
     }
 
     .notes{
       line-height:1.7;
 
-      color:#fff5ef;
+      color:#5e2a35;
 
-      opacity:0.88;
+      opacity:0.9;
+
+      font-size:1rem;
     }
 
     .home{
@@ -133,13 +143,15 @@
 
       margin:70px auto 0;
 
-      color:#ffe6ef;
+      color:#8F0425;
 
       text-decoration:none;
 
       font-size:1rem;
 
       opacity:0.75;
+
+      transition:0.2s;
     }
 
     .home:hover{
@@ -150,7 +162,9 @@
 
       .book{
         flex-direction:column;
+
         align-items:center;
+
         text-align:center;
       }
 
@@ -168,13 +182,17 @@
   <div class="page">
 
     <h1>Summer Reading</h1>
-    <p>When I'm bored I'll read</p>
+
+    <p class="subtitle">
+      when i'm bored i'll read
+    </p>
 
     <div class="book">
 
       <img src="book1.jpg" alt="Book Cover">
 
       <div class="info">
+
         <h2>The Bell Jar</h2>
 
         <div class="author">
@@ -184,6 +202,7 @@
         <div class="notes">
           sad girls in summer etc etc
         </div>
+
       </div>
 
     </div>
@@ -193,6 +212,7 @@
       <img src="book2.jpg" alt="Book Cover">
 
       <div class="info">
+
         <h2>Norwegian Wood</h2>
 
         <div class="author">
@@ -202,6 +222,7 @@
         <div class="notes">
           jazz cigarettes melancholy probably
         </div>
+
       </div>
 
     </div>
@@ -211,6 +232,7 @@
       <img src="book3.jpg" alt="Book Cover">
 
       <div class="info">
+
         <h2>On the Road</h2>
 
         <div class="author">
@@ -220,6 +242,7 @@
         <div class="notes">
           american summer drifting feeling
         </div>
+
       </div>
 
     </div>
