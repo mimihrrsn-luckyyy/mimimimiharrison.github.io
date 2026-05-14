@@ -655,6 +655,23 @@
     </a>
 
   </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const page = document.querySelector(".page");
+  const books = Array.from(document.querySelectorAll(".book"));
 
+  books.sort((a, b) => {
+    const aText = a.querySelector(".pages").textContent;
+    const bText = b.querySelector(".pages").textContent;
+
+    const aPages = Number(aText.match(/\d+/)?.[0] || 0);
+    const bPages = Number(bText.match(/\d+/)?.[0] || 0);
+
+    return aPages - bPages;
+  });
+
+  books.forEach(book => page.appendChild(book));
+});
+</script>
 </body>
 </html>
