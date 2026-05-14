@@ -190,6 +190,22 @@
   </style>
 </head>
 
+
+<script>
+  const pageContainer = document.querySelector(".page");
+
+  const books = Array.from(document.querySelectorAll(".book"));
+
+  books.sort((a, b) => {
+    const aPages = parseInt(a.querySelector(".pages").textContent.replace(/\D/g, ""));
+    const bPages = parseInt(b.querySelector(".pages").textContent.replace(/\D/g, ""));
+    return aPages - bPages;
+  });
+
+  books.forEach(book => pageContainer.appendChild(book));
+</script>
+
+
 <body>
 
   <div class="page">
