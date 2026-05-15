@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Summer Glossary</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+        linear-gradient(rgba(247,238,220,.88), rgba(247,238,220,.88)),
+        url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+
+    background-color:#efe2c9;
+
+    font-family:"Cormorant Garamond", serif;
+    color:#5b4334;
+
+    overflow-x:hidden;
+}
+
+
+/* HEADER */
+
+header{
+    text-align:center;
+
+    padding-top:70px;
+    padding-bottom:20px;
+}
+
+header h1{
+    font-family:"Pinyon Script", cursive;
+    font-size:5rem;
+    font-weight:normal;
+
+    color:#7b4d39;
+
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:.15em;
+
+    opacity:.7;
+}
+
+
+/* GLOSSARY LAYOUT */
+
+.glossary{
+    width:min(1300px, 92%);
+    margin:auto;
+
+    padding:50px 0 100px;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:55px;
+}
+
+
+/* EACH FORTUNE PAPER */
+
+.fortune{
+    position:relative;
+
+    width:260px;
+
+    transition:.3s ease;
+}
+
+.fortune:hover{
+    transform:translateY(-6px) rotate(0deg) !important;
+}
+
+
+/* IMAGE */
+
+.fortune img{
+    width:100%;
+    display:block;
+
+    filter:
+        drop-shadow(0 8px 18px rgba(70,45,20,.12));
+}
+
+
+/* TEXT ON PAPER */
+
+.fortune-text{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    width:72%;
+
+    text-align:center;
+
+    color:#654636;
+}
+
+
+/* WORD */
+
+.fortune-text h2{
+    font-family:"Pinyon Script", cursive;
+    font-size:2rem;
+    font-weight:normal;
+
+    color:#7a4c38;
+
+    margin-bottom:12px;
+}
+
+
+/* DEFINITION */
+
+.fortune-text p{
+    font-size:1rem;
+    line-height:1.5;
+    letter-spacing:.02em;
+}
+
+
+/* SCATTERED PAPERS */
+
+.fortune:nth-child(odd){
+    transform:rotate(-2deg);
+}
+
+.fortune:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.fortune:nth-child(3n){
+    transform:rotate(-4deg);
+}
+
+.fortune:nth-child(5n){
+    transform:rotate(1deg);
+}
+
+
+/* LITTLE FLOATING STARS */
+
+.sparkle{
+    position:fixed;
+
+    opacity:.3;
+
+    font-size:1rem;
+
+    pointer-events:none;
+
+    animation:float 6s ease-in-out infinite;
+}
+
+.s1{
+    top:12%;
+    left:10%;
+}
+
+.s2{
+    top:20%;
+    right:12%;
+}
+
+.s3{
+    bottom:16%;
+    left:15%;
+}
+
+.s4{
+    bottom:20%;
+    right:18%;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sparkle s1">✷</div>
+<div class="sparkle s2">✷</div>
+<div class="sparkle s3">✷</div>
+<div class="sparkle s4">✷</div>
+
+
+<header>
+    <h1>Summer Glossary</h1>
+    <p>words collected along the way</p>
+</header>
+
+
+<section class="glossary">
+
+
+    <!-- WORD 1 -->
+
+    <div class="fortune">
+
+        <img src="fort1.png" alt="fortune paper">
+
+        <div class="fortune-text">
+            <h2>ephemeral</h2>
+            <p>lasting for only a short time</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- WORD 2 -->
+
+    <div class="fortune">
+
+        <img src="fort1.png" alt="fortune paper">
+
+        <div class="fortune-text">
+            <h2>verdant</h2>
+            <p>green with rich plant life</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- WORD 3 -->
+
+    <div class="fortune">
+
+        <img src="fort1.png" alt="fortune paper">
+
+        <div class="fortune-text">
+            <h2>sonder</h2>
+            <p>the realization that everyone lives a life as vivid as your own</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- WORD 4 -->
+
+    <div class="fortune">
+
+        <img src="fort1.png" alt="fortune paper">
+
+        <div class="fortune-text">
+            <h2>mellifluous</h2>
+            <p>sweet and musical sounding</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- WORD 5 -->
+
+    <div class="fortune">
+
+        <img src="fort1.png" alt="fortune paper">
+
+        <div class="fortune-text">
+            <h2>halcyon</h2>
+            <p>peaceful, nostalgic, idyllic</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- WORD 6 -->
+
+    <div class="fortune">
+
+        <img src="fort1.png" alt="fortune paper">
+
+        <div class="fortune-text">
+            <h2>luminous</h2>
+            <p>softly glowing or radiant</p>
+        </div>
+
+    </div>
+
+
+</section>
+
+</body>
+</html>
