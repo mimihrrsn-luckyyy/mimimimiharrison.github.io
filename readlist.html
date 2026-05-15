@@ -67,6 +67,45 @@
       color:#8F0425;
     }
 
+.glossary-link{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+
+  width:fit-content;
+  margin:0 auto 60px;
+
+  text-decoration:none;
+
+  transition:transform 0.25s ease, opacity 0.25s ease;
+}
+
+.glossary-link img{
+  width:90px;
+  height:auto;
+
+  filter:
+    drop-shadow(0 4px 8px rgba(0,0,0,0.28));
+}
+
+.glossary-link span{
+  font-family:"Pinyon Script", cursive;
+  font-size:2rem;
+
+  color:#ffd7e8;
+
+  text-shadow:
+    0 0 10px rgba(255,220,230,0.35);
+
+  letter-spacing:1px;
+}
+
+.glossary-link:hover{
+  transform:translateY(-3px) rotate(-2deg);
+  opacity:0.9;
+}
+
 .book{
   display:flex;
 
@@ -197,6 +236,11 @@
 
     <h1>Summer Reading</h1>
     <p class="subtitle"></p>
+
+    <a class="glossary-link" href="glossary.html">
+      <img src="fortunecookie.png" alt="Glossary Fortune Cookie">
+      <span>glossary</span>
+    </a>
 
     <div class="book">
 
