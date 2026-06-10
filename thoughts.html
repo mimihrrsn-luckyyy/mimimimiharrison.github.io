@@ -1,43 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body{
-      margin:0;
-      min-height:100vh;
+<title>Summer Diary</title>
 
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      background:#f6efe4;
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 
-      font-family:Georgia, serif;
+<style>
+
+:root{
+
+    --paper:#f4ead2;
+    --paper-dark:#eadcbf;
+
+    --ink:#43372d;
+    --soft-ink:#8a755f;
+
+    --gold:#f6d36d;
+    --gold-dark:#c8912d;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.18),
+            rgba(0,0,0,.18)
+        ),
+        url("YOUR-BACKGROUND.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+}
+
+/* subtle vignette */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 45%,
+            rgba(0,0,0,.22) 100%
+        );
+
+    pointer-events:none;
+
+}
+
+/* page wrapper */
+
+.wrapper{
+
+    width:min(1200px, 95%);
+    margin:auto;
+
+    padding:
+        70px
+        0
+        120px;
+
+}
+
+/* main title */
+
+.page-title{
+
+    font-family:"Pinyon Script", cursive;
+
+    font-size:clamp(5rem, 10vw, 9rem);
+
+    font-weight:400;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        to bottom,
+        #fffbe2 0%,
+        #ffe88d 20%,
+        #f6d36d 45%,
+        #d9a63e 70%,
+        #fff1af 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+
+        0 0 10px rgba(255,223,120,.8),
+        0 0 25px rgba(255,208,90,.55),
+        0 0 50px rgba(255,190,70,.25),
+
+        3px 4px 10px rgba(0,0,0,.18);
+
+}
+
+/* subtitle */
+
+.subtitle{
+
+    text-align:center;
+
+    color:#f5ead1;
+
+    font-family:"Courier New", monospace;
+
+    letter-spacing:3px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    margin-bottom:80px;
+
+}
+
+/* diary cards */
+
+.entry-card{
+
+    width:min(850px, 90%);
+
+    margin:0 auto 80px;
+
+    background:var(--paper);
+
+    border:1px solid rgba(80,60,40,.12);
+
+    padding:45px 55px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.18),
+        inset 0 0 0 1px rgba(255,255,255,.35);
+
+    position:relative;
+
+}
+
+/* paper texture */
+
+.entry-card::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+        radial-gradient(
+            rgba(0,0,0,.05) .7px,
+            transparent .7px
+        );
+
+    background-size:5px 5px;
+
+    opacity:.08;
+
+    pointer-events:none;
+
+}
+
+/* metadata */
+
+.entry-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid rgba(90,70,50,.12);
+
+    font-family:"Courier New", monospace;
+
+    font-size:.8rem;
+
+    letter-spacing:1px;
+
+    color:var(--soft-ink);
+
+    text-transform:uppercase;
+
+}
+
+/* entry title */
+
+.entry-title{
+
+    font-family:"Pinyon Script", cursive;
+
+    font-size:3.5rem;
+
+    font-weight:400;
+
+    margin-bottom:25px;
+
+    background:linear-gradient(
+        to bottom,
+        #fffbe2,
+        #f6d36d,
+        #c8912d
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 8px rgba(255,220,120,.55),
+        0 0 18px rgba(255,200,80,.25);
+
+}
+
+/* diary text */
+
+.entry-body{
+
+    font-family:"Courier New", monospace;
+
+    font-size:1rem;
+
+    color:var(--ink);
+
+    line-height:2.15;
+
+    letter-spacing:.3px;
+
+}
+
+.entry-body p{
+
+    margin-bottom:2em;
+
+}
+
+/* footer note */
+
+.footer{
+
+    text-align:center;
+
+    color:#f4ead2;
+
+    font-family:"Courier New", monospace;
+
+    font-size:.8rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-top:30px;
+
+}
+
+/* mobile */
+
+@media(max-width:700px){
+
+    .entry-card{
+
+        padding:35px 30px;
+
     }
 
-    h1{
-      font-size:4rem;
-      margin-bottom:20px;
+    .entry-meta{
+
+        flex-direction:column;
+        gap:10px;
+
     }
 
-    a{
-      color:black;
-      text-decoration:none;
-      font-size:1.2rem;
+    .entry-title{
+
+        font-size:2.8rem;
+
     }
-  </style>
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <h1>Projects</h1>
+<div class="wrapper">
 
-  <a href="index.html">← Back Home</a>
+    <h1 class="page-title">
+        summer diary
+    </h1>
+
+    <div class="subtitle">
+        june — august 2026
+    </div>
+
+    <!-- ENTRY 1 -->
+
+    <section class="entry-card">
+
+        <div class="entry-meta">
+
+            <div>
+                JULY 23, 2026<br>
+                CEDAR LAKE
+            </div>
+
+            <div>
+                WEATHER: SUNNY<br>
+                READING: THE VIRGIN SUICIDES
+            </div>
+
+        </div>
+
+        <h2 class="entry-title">
+            Late July
+        </h2>
+
+        <div class="entry-body">
+
+            <p>
+                We arrived at the lake much later than expected.
+                The water was perfectly still and reflected every cloud.
+                It looked less like a landscape and more like a painting.
+            </p>
+
+            <p>
+                Most of the evening was spent reading quietly by the dock.
+                The air smelled faintly of cedar and sunscreen. Every
+                surface seemed to glow after sunset.
+            </p>
+
+            <p>
+                The entire night already felt nostalgic while it was
+                happening.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ENTRY 2 -->
+
+    <section class="entry-card">
+
+        <div class="entry-meta">
+
+            <div>
+                AUGUST 2, 2026<br>
+                NORTH SHORE
+            </div>
+
+            <div>
+                WEATHER: HUMID<br>
+                SONG: MARINERS APARTMENT COMPLEX
+            </div>
+
+        </div>
+
+        <h2 class="entry-title">
+            Golden Hour
+        </h2>
+
+        <div class="entry-body">
+
+            <p>
+                The light tonight turned everything honey-colored.
+                Even the gravel road looked beautiful.
+            </p>
+
+            <p>
+                We stayed until after sunset and watched sailboats
+                disappear into the haze.
+            </p>
+
+            <p>
+                It felt like the kind of memory that would become
+                important years later.
+            </p>
+
+        </div>
+
+    </section>
+
+    <div class="footer">
+        PERSONAL ARCHIVE
+    </div>
+
+</div>
 
 </body>
 </html>
