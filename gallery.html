@@ -21,48 +21,35 @@
 
 body{
     min-height:100vh;
-
-    background:
-        url("pinkfab.jpg") center/cover fixed;
-
+    background:url("pinkfab.jpg") center/cover fixed;
     font-family:"Cormorant Garamond", serif;
     color:#5b4334;
-
     overflow-x:hidden;
 }
-
-/* subtle vignette */
 
 body::before{
     content:"";
     position:fixed;
     inset:0;
-
     background:
         radial-gradient(
             circle,
             transparent 45%,
             rgba(0,0,0,.22) 100%
         );
-
     pointer-events:none;
 }
 
-/* page wrapper */
-
 .wrapper{
-    width:min(1200px, 95%);
+    width:min(1200px,95%);
     margin:auto;
     padding:70px 0 120px;
 }
 
-/* main title */
-
 .page-title{
     font-family:"Pinyon Script", cursive;
-    font-size:clamp(5rem, 10vw, 9rem);
+    font-size:clamp(5rem,10vw,9rem);
     font-weight:400;
-    letter-spacing:0.5px;
     text-align:center;
     margin-bottom:10px;
 
@@ -90,12 +77,7 @@ body::before{
         4px 4px 10px rgba(0,0,0,.18);
 
     transform:rotate(-1deg);
-
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
 }
-
-/* subtitle */
 
 .subtitle{
     text-align:center;
@@ -108,9 +90,8 @@ body::before{
 }
 
 .glossary{
-    width:min(1300px, 92%);
+    width:min(1300px,92%);
     margin:auto;
-
     padding:50px 0 100px;
 
     display:flex;
@@ -122,6 +103,10 @@ body::before{
 .fortune{
     position:relative;
     width:260px;
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
     transition:.3s ease;
 }
 
@@ -129,19 +114,21 @@ body::before{
     transform:translateY(-6px) rotate(0deg) !important;
 }
 
+.fortune:visited{
+    color:inherit;
+}
+
 .fortune img{
     width:100%;
     display:block;
-
-    filter:
-        drop-shadow(0 8px 18px rgba(70,45,20,.12));
+    filter:drop-shadow(0 8px 18px rgba(70,45,20,.12));
 }
 
 .fortune-text{
     position:absolute;
     top:50%;
     left:50%;
-    transform:translate(-50%, -50%);
+    transform:translate(-50%,-50%);
     width:72%;
     text-align:center;
     color:#303D6B;
@@ -157,7 +144,6 @@ body::before{
 .fortune-text p{
     font-size:.75rem;
     line-height:1;
-    letter-spacing:.02em;
 }
 
 .fortune:nth-child(odd){
@@ -183,116 +169,80 @@ body::before{
 
 <div class="wrapper">
 
-    <h1 class="page-title">
-        summer poetry
-    </h1>
+<h1 class="page-title">
+summer poetry
+</h1>
 
-    <div class="subtitle">
-        june — august 2026
+<div class="subtitle">
+june — august 2026
+</div>
+
+<section class="glossary">
+
+<a href="ague.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Ague</h2>
     </div>
+</a>
 
-    <section class="glossary">
+<a href="ineffable.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Ineffable</h2>
+    </div>
+</a>
 
-        <!-- POEM 1 -->
+<a href="great-darke-pilgrimage.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Great Darke Pilgrimage</h2>
+    </div>
+</a>
 
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
+<a href="bitterroot-mythos.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Bitterroot Mythos</h2>
+    </div>
+</a>
 
-            <div class="fortune-text">
-                <h2>Ague</h2>
-                <p></p>
-            </div>
-        </div>
+<a href="rubicon.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Rubicon</h2>
+    </div>
+</a>
 
-        <!-- POEM 2 -->
+<a href="wane.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Wane</h2>
+    </div>
+</a>
 
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
+<a href="twilight-ode.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Twilight Ode</h2>
+    </div>
+</a>
 
-            <div class="fortune-text">
-                <h2>Ineffable</h2>
-                <p></p>
-            </div>
-        </div>
+<a href="palimpsest-sea.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Palimpsest Sea</h2>
+    </div>
+</a>
 
-        <!-- POEM 3 -->
+<a href="steady-state.html" class="fortune">
+    <img src="fort1.png" alt="fortune paper">
+    <div class="fortune-text">
+        <h2>Steady State</h2>
+    </div>
+</a>
 
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
-
-            <div class="fortune-text">
-                <h2>Great Darke Pilgrimage</h2>
-                <p></p>
-            </div>
-        </div>
-
-        <!-- POEM 4 -->
-
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
-
-            <div class="fortune-text">
-                <h2>Bitterroot Mythos</h2>
-                <p></p>
-            </div>
-        </div>
-
-        <!-- POEM 5 -->
-
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
-
-            <div class="fortune-text">
-                <h2>Rubicon</h2>
-                <p></p>
-            </div>
-        </div>
-
-        <!-- POEM 6 -->
-
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
-
-            <div class="fortune-text">
-                <h2>Wane</h2>
-                <p></p>
-            </div>
-        </div>
-
-        <!-- POEM 7 -->
-
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
-
-            <div class="fortune-text">
-                <h2>Twilight Ode</h2>
-                <p></p>
-            </div>
-        </div>
-
-        <!-- POEM 8 -->
-
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
-
-            <div class="fortune-text">
-                <h2>Palimpsest Sea</h2>
-                <p></p>
-            </div>
-        </div>
-
-        <!-- POEM 9 -->
-
-        <div class="fortune">
-            <img src="fort1.png" alt="fortune paper">
-
-            <div class="fortune-text">
-                <h2>Steady State</h2>
-                <p></p>
-            </div>
-        </div>
-
-    </section>
+</section>
 
 </div>
 
