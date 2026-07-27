@@ -355,6 +355,103 @@ body::before{
 
     }
 
+    .glossary{
+    width:min(1300px, 92%);
+    margin:auto;
+
+    padding:50px 0 100px;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:55px;
+}
+
+
+
+.fortune{
+    position:relative;
+
+    width:260px;
+
+    transition:.3s ease;
+}
+
+.fortune:hover{
+    transform:translateY(-6px) rotate(0deg) !important;
+}
+
+
+
+.fortune img{
+    width:100%;
+    display:block;
+
+    filter:
+        drop-shadow(0 8px 18px rgba(70,45,20,.12));
+}
+
+
+
+
+.fortune-text{
+    font-family:"Cormorant Garamond", cursive;
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    width:72%;
+
+    text-align:center;
+
+    color:#303D6B;
+}
+
+
+
+
+.fortune-text h2{
+    font-family:"Cormorant Garamond", cursive;
+    font-size:1rem;
+    font-weight:normal;
+
+    color:#303D6B;
+
+    margin-bottom:12px;
+}
+
+
+
+
+.fortune-text p{
+    font-size:0.75rem;
+    line-height:1;
+    letter-spacing:.02em;
+}
+
+
+
+
+.fortune:nth-child(odd){
+    transform:rotate(-2deg);
+}
+
+.fortune:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.fortune:nth-child(3n){
+    transform:rotate(-4deg);
+}
+
+.fortune:nth-child(5n){
+    transform:rotate(1deg);
+}
+
+
 }
 
 </style>
@@ -374,116 +471,7 @@ body::before{
 
     <!-- ENTRY 1 -->
 
-    <section class="entry-card">
 
-        <div class="entry-meta">
-
-            <div>
-                May 24th, 2026<br>
-                Poem 1
-            </div>
-
-            <div>
-                 
-            </div>
-
-        </div>
-
-        <h2 class="entry-title">
-Ague
-        </h2>
-
-        <div class="entry-body">
-<p>
-On idle, humid, summer days, especially after rainstorms, I wonder if I’m vermin.
-<p>
-An itch-inducing insect.
-<p>
-When the day is as dull as dishwater and the night is moonless and still, I hear the quiet buzzing of mosquito wings.
-<p>
-A bored hunger overtakes me.
-<p>
-Try to brush me off or reason me away.
-<p>
-I doubt I’ll be gone for long without a direct hit. I’m just hungry.
-<p>
-And at night, a painful expression marks my face.
-<p>
-I know that I would swat my hand through the mucky air, too. 
-<p>
-I can’t stand the buzzing and itching.
-<p>
-I could tell you I’ll stop biting, or spray myself with DEET.
-<p>
-Will I get what I crave in more abundance? What a parasitic thought.
-<p>
-Maybe it’s because my Papaw studied entomology.
-<p>
-<p>
-But I’ve seen who feeds on the nectar of the lilac blooms at dusk.
-<p>
-Inconspicuous, yet prolific pollinators.
-<p>
-So in the marsh among blossoming flowers, my stomach aches less.
-<p>
-The rising moon glows in the lavender sky as the sweltering day cools, and I wonder: will you only have known me by my most pestilent trait?
-<p>
-Do you think bothersome bites and a propensity to fall ill rid me of any good?
-<p>
-            <p>
-                
-        </div>
-
-    </section>
-
-    <!-- ENTRY 2 -->
-
-    <section class="entry-card">
-
-        <div class="entry-meta">
-
-            <div>
-                AUGUST 2, 2026<br>
-                NORTH SHORE
-            </div>
-
-            <div>
-                WEATHER: HUMID<br>
-                SONG: MARINERS APARTMENT COMPLEX
-            </div>
-
-        </div>
-
-        <h2 class="entry-title">
-            Golden Hour
-        </h2>
-
-        <div class="entry-body">
-
-            <p>
-                The light tonight turned everything honey-colored.
-                Even the gravel road looked beautiful.
-            </p>
-
-            <p>
-                We stayed until after sunset and watched sailboats
-                disappear into the haze.
-            </p>
-
-            <p>
-                It felt like the kind of memory that would become
-                important years later.
-            </p>
-
-        </div>
-
-    </section>
-
-    <div class="footer">
-        PERSONAL ARCHIVE
-    </div>
-
-</div>
 
 </body>
 </html>
