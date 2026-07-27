@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Special+Elite&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
+<title>Summer Diary</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+
 <style>
 
 :root{
 
-    --paper:#efe4c9;
-    --paper-dark:#e4d4b1;
+    --paper:#f4ead2;
+    --paper-dark:#eadcbf;
 
-    --ink:#4d4033;
-    --soft-ink:#766657;
+    --ink:#43372d;
+    --soft-ink:#8a755f;
 
-    --line:#bba483;
-    --gold:#a88a5d;
-
-    --photo-border:#f8f4eb;
+    --gold:#f6d36d;
+    --gold-dark:#c8912d;
 
 }
 
@@ -32,428 +34,324 @@
 
 body{
 
+    min-height:100vh;
+
     background:
-        url("pinkfab.jpg") center/cover fixed;
+        url("pinkfab.jpg");
 
     background-size:cover;
+    background-position:center;
     background-attachment:fixed;
-
-    color:var(--ink);
-
-    font-family:'Cormorant Garamond', serif;
-
-    padding:60px 20px;
 
 }
 
-/* centered journal */
+/* subtle vignette */
 
-.journal{
+body::before{
 
-    width:min(1180px, 95%);
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 45%,
+            rgba(0,0,0,.22) 100%
+        );
+
+    pointer-events:none;
+
+}
+
+/* page wrapper */
+
+.wrapper{
+
+    width:min(1200px, 95%);
     margin:auto;
+
+    padding:
+        70px
+        0
+        120px;
+
+}
+
+/* main title */
+
+.page-title{
+
+    font-family:"Pinyon Script", cursive;
+
+    font-size:clamp(5rem, 10vw, 9rem);
+
+    font-weight:400;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        to bottom,
+        #fffbe2 0%,
+        #ffe88d 20%,
+        #f6d36d 45%,
+        #d9a63e 70%,
+        #fff1af 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+
+        0 0 10px rgba(255,223,120,.8),
+        0 0 25px rgba(255,208,90,.55),
+        0 0 50px rgba(255,190,70,.25),
+
+        3px 4px 10px rgba(0,0,0,.18);
+
+}
+
+
+
+
+
+.page-title{
+  font-family:"Pinyon Script", cursive;
+
+  font-size: clamp(5rem, 10vw, 9rem);
+  font-weight:400;
+
+  letter-spacing:0.5px;
+
+  background: linear-gradient(
+    to bottom,
+    #fff8d6 0%,
+    #ffe88a 18%,
+    #f3cf58 38%,
+    #c89a2b 55%,
+    #fff0a8 72%,
+    #a97816 100%
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+
+  text-shadow:
+
+    /* glossy top highlight */
+    0 -1px 0 rgba(255,255,220,0.9),
+
+    /* soft golden depth */
+    1px 1px 2px rgba(212,169,58,.45),
+    2px 2px 4px rgba(193,141,34,.25),
+
+    /* warm bloom */
+    0 0 10px rgba(255,230,120,.55),
+    0 0 24px rgba(255,220,90,.35),
+    0 0 50px rgba(255,210,90,.18),
+
+    /* cinematic shadow */
+    4px 4px 10px rgba(0,0,0,.18);
+
+  transform: rotate(-1deg);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+    
+
+/* subtitle */
+
+.subtitle{
+
+    text-align:center;
+
+    color:#f5ead1;
+
+    font-family:"Courier New", monospace;
+
+    letter-spacing:3px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    margin-bottom:80px;
+
+}
+
+/* diary cards */
+
+.entry-card{
+
+    width:min(850px, 90%);
+
+    margin:0 auto 80px;
 
     background:var(--paper);
 
-    border:1px solid rgba(90,70,50,0.18);
+    border:1px solid rgba(80,60,40,.12);
+
+    padding:45px 55px;
 
     box-shadow:
-        0 0 0 14px rgba(255,247,228,0.4),
-        0 30px 60px rgba(50,30,10,0.18);
+        0 10px 35px rgba(0,0,0,.18),
+        inset 0 0 0 1px rgba(255,255,255,.35);
 
     position:relative;
 
 }
 
-/* subtle paper texture */
-
-.journal::before{
+/* paper texture */
+.entry-card::before{
 
     content:"";
 
     position:absolute;
     inset:0;
 
-    background-image:
-        radial-gradient(rgba(0,0,0,0.06) 0.7px, transparent 0.7px);
+    background:
 
-    background-size:5px 5px;
+        radial-gradient(
+            rgba(120,95,70,.06) 0.5px,
+            transparent 0.5px
+        ),
 
-    opacity:0.13;
+        radial-gradient(
+            rgba(255,255,255,.18) 0.5px,
+            transparent 0.5px
+        );
+
+    background-size:
+        7px 7px,
+        11px 11px;
+
+    background-position:
+        0 0,
+        3px 4px;
+
+    opacity:.35;
 
     pointer-events:none;
-
 }
 
-/* page header */
+/* metadata */
 
-.header{
-
-    border-bottom:1px solid rgba(110,90,70,0.2);
-
-    padding:58px 70px 42px;
-
-    text-align:center;
-
-}
-
-.header h1{
-
-    font-family:'Pinyon Script', cursive;
-
-    font-size:5.8rem;
-
-    font-weight:400;
-
-    color:#6a5440;
-
-    line-height:0.9;
-
-}
-
-.subtitle{
-
-    margin-top:16px;
-
-    font-family:'Libre Baskerville', serif;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    font-size:0.72rem;
-
-    color:#8c7866;
-
-}
-
-/* precise grid */
-
-.layout{
-
-    display:grid;
-
-    grid-template-columns:1.4fr 0.9fr;
-
-    min-height:800px;
-
-}
-
-/* left photo section */
-
-.gallery{
-
-    padding:55px;
-
-    border-right:1px solid rgba(110,90,70,0.16);
-
-}
-
-/* large image */
-
-.featured-photo{
-
-    background:var(--photo-border);
-
-    border:1px solid rgba(90,70,50,0.14);
-
-    padding:14px;
-
-}
-
-.featured-photo img{
-
-    width:100%;
-    height:560px;
-
-    object-fit:cover;
-    display:block;
-
-    filter:
-        saturate(0.88)
-        contrast(0.95)
-        brightness(0.98);
-
-}
-
-/* image metadata */
-
-.meta{
+.entry-meta{
 
     display:flex;
 
     justify-content:space-between;
 
-    margin-top:14px;
+    align-items:flex-start;
 
-    padding-top:12px;
+    gap:20px;
 
-    border-top:1px solid rgba(110,90,70,0.14);
+    margin-bottom:30px;
 
-    font-size:0.78rem;
+    padding-bottom:20px;
 
-    letter-spacing:2px;
+    border-bottom:1px solid rgba(90,70,50,.12);
 
-    text-transform:uppercase;
+    font-family:"Courier New", monospace;
 
-    color:#84705f;
+    font-size:.8rem;
 
-    font-family:'Libre Baskerville', serif;
+    letter-spacing:1px;
 
-}
-
-/* lower images */
-
-.bottom-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:22px;
-
-    margin-top:24px;
-
-}
-
-.small-photo{
-
-    background:var(--photo-border);
-
-    border:1px solid rgba(90,70,50,0.14);
-
-    padding:10px;
-
-}
-
-.small-photo img{
-
-    width:100%;
-    height:210px;
-
-    object-fit:cover;
-
-    display:block;
-
-    filter:
-        saturate(0.88)
-        contrast(0.95);
-
-}
-
-.small-caption{
-
-    margin-top:10px;
-
-    font-size:0.78rem;
-
-    letter-spacing:2px;
+    color:var(--soft-ink);
 
     text-transform:uppercase;
 
-    color:#84705f;
-
-    text-align:center;
-
-    font-family:'Libre Baskerville', serif;
-
 }
 
-/* notes panel */
-
-.notes{
-
-    padding:58px 48px;
-
-    position:relative;
-
-}
-
-/* journal tabs */
-
-.section-label{
-
-    font-family:'Libre Baskerville', serif;
-
-    text-transform:uppercase;
-
-    letter-spacing:3px;
-
-    font-size:0.72rem;
-
-    color:#907962;
-
-    margin-bottom:18px;
-
-}
+/* entry title */
 
 .entry-title{
 
-    font-size:3rem;
+    font-family:"Courier New", monospace;
 
-    line-height:1;
+    font-size:.8rem;
 
-    margin-bottom:22px;
+    font-weight:400;   /* or normal */
 
-    font-weight:500;
+    letter-spacing:1px;
 
-    color:#5d4939;
-
-}
-
-/* details */
-
-.details{
-
-    display:grid;
-
-    grid-template-columns:110px 1fr;
-
-    row-gap:16px;
-
-    column-gap:18px;
-
-    margin-bottom:38px;
-
-    padding-bottom:28px;
-
-    border-bottom:1px solid rgba(110,90,70,0.18);
-
-}
-
-.label{
-
-    font-family:'Libre Baskerville', serif;
-
-    font-size:0.72rem;
-
-    letter-spacing:2px;
+    color:var(--soft-ink);
 
     text-transform:uppercase;
 
-    color:#8a7460;
 
 }
 
-.value{
+/* diary text */
 
-    font-size:1.08rem;
+.entry-body{
 
-    line-height:1.6;
+    font-family:"Courier New", monospace;
+    
+    font-size:.8rem;
 
-    color:#544739;
+    letter-spacing:1px;
 
-}
-
-/* long journal text */
-
-.entry-text{
-
-    font-size:1.18rem;
-
-    line-height:2;
-
-    color:#564839;
+    color:var(--soft-ink);
 
 }
 
-.entry-text p{
+.entry-body p{
 
-    margin-bottom:24px;
-
-}
-
-/* quote block */
-
-.quote{
-
-    margin-top:34px;
-
-    padding:24px;
-
-    border:1px solid rgba(110,90,70,0.18);
-
-    background:rgba(255,248,232,0.4);
-
-    font-style:italic;
-
-    line-height:1.9;
-
-    color:#6f5d4f;
+    margin-bottom:2em;
 
 }
 
-/* footer */
+/* footer note */
 
 .footer{
 
-    border-top:1px solid rgba(110,90,70,0.16);
+    text-align:center;
 
-    padding:18px 40px;
+    color:#f4ead2;
 
-    display:flex;
+    font-family:"Courier New", monospace;
 
-    justify-content:space-between;
+    font-size:.8rem;
 
-    font-family:'Libre Baskerville', serif;
+    letter-spacing:3px;
 
     text-transform:uppercase;
 
-    letter-spacing:2px;
-
-    font-size:0.7rem;
-
-    color:#8a7662;
+    margin-top:30px;
 
 }
 
-@media(max-width:950px){
-
-    .layout{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .gallery{
-
-        border-right:none;
-        border-bottom:1px solid rgba(110,90,70,0.16);
-
-    }
-
-}
+/* mobile */
 
 @media(max-width:700px){
 
-    .header{
+    .entry-card{
 
-        padding:48px 30px 36px;
-
-    }
-
-    .header h1{
-
-        font-size:4.5rem;
+        padding:35px 30px;
 
     }
 
-    .gallery,
-    .notes{
+    .entry-meta{
 
-        padding:30px;
-
-    }
-
-    .bottom-grid{
-
-        grid-template-columns:1fr;
+        flex-direction:column;
+        gap:10px;
 
     }
 
-    .featured-photo img{
+    .entry-title{
 
-        height:360px;
+        font-size:2.8rem;
 
     }
 
@@ -464,208 +362,128 @@ body{
 
 <body>
 
-<div class="journal">
+<div class="wrapper">
 
-    <section class="header">
+    <h1 class="page-title">
+     summer poetry
+    </h1>
 
-        <h1>summer field journal</h1>
+    <div class="subtitle">
+        june — august 2026
+    </div>
 
-        <div class="subtitle">
-            june — august 2026 • western new york
+    <!-- ENTRY 1 -->
+
+    <section class="entry-card">
+
+        <div class="entry-meta">
+
+            <div>
+                May 24th, 2026<br>
+                Poem 1
+            </div>
+
+            <div>
+                 
+            </div>
+
+        </div>
+
+        <h2 class="entry-title">
+Ague
+        </h2>
+
+        <div class="entry-body">
+<p>
+On idle, humid, summer days, especially after rainstorms, I wonder if I’m vermin.
+<p>
+An itch-inducing insect.
+<p>
+When the day is as dull as dishwater and the night is moonless and still, I hear the quiet buzzing of mosquito wings.
+<p>
+A bored hunger overtakes me.
+<p>
+Try to brush me off or reason me away.
+<p>
+I doubt I’ll be gone for long without a direct hit. I’m just hungry.
+<p>
+And at night, a painful expression marks my face.
+<p>
+I know that I would swat my hand through the mucky air, too. 
+<p>
+I can’t stand the buzzing and itching.
+<p>
+I could tell you I’ll stop biting, or spray myself with DEET.
+<p>
+Will I get what I crave in more abundance? What a parasitic thought.
+<p>
+Maybe it’s because my Papaw studied entomology.
+<p>
+<p>
+But I’ve seen who feeds on the nectar of the lilac blooms at dusk.
+<p>
+Inconspicuous, yet prolific pollinators.
+<p>
+So in the marsh among blossoming flowers, my stomach aches less.
+<p>
+The rising moon glows in the lavender sky as the sweltering day cools, and I wonder: will you only have known me by my most pestilent trait?
+<p>
+Do you think bothersome bites and a propensity to fall ill rid me of any good?
+<p>
+            <p>
+                
         </div>
 
     </section>
 
-    <section class="layout">
+    <!-- ENTRY 2 -->
 
-        <!-- LEFT -->
+    <section class="entry-card">
 
-        <div class="gallery">
+        <div class="entry-meta">
 
-            <div class="featured-photo">
-
-                <img src="YOUR-IMAGE.jpg">
-
-                <div class="meta">
-
-                    <span>cedar lake</span>
-
-                    <span>7:42 pm</span>
-
-                </div>
-
+            <div>
+                AUGUST 2, 2026<br>
+                NORTH SHORE
             </div>
 
-            <div class="bottom-grid">
-
-                <div class="small-photo">
-
-                    <img src="YOUR-IMAGE.jpg">
-
-                    <div class="small-caption">
-                        wildflowers near trail marker 4
-                    </div>
-
-                </div>
-
-                <div class="small-photo">
-
-                    <img src="YOUR-IMAGE.jpg">
-
-                    <div class="small-caption">
-                        reading dock • north shore
-                    </div>
-
-                </div>
-
+            <div>
+                WEATHER: HUMID<br>
+                SONG: MARINERS APARTMENT COMPLEX
             </div>
 
         </div>
 
-        <!-- RIGHT -->
+        <h2 class="entry-title">
+            Golden Hour
+        </h2>
 
-        <div class="notes">
+        <div class="entry-body">
 
-            <div class="section-label">
-                entry no. 04
-            </div>
+            <p>
+                The light tonight turned everything honey-colored.
+                Even the gravel road looked beautiful.
+            </p>
 
-            <h2 class="entry-title">
-                Late July
-            </h2>
+            <p>
+                We stayed until after sunset and watched sailboats
+                disappear into the haze.
+            </p>
 
-            <div class="details">
-
-                <div class="label">Date</div>
-                <div class="value">July 23, 2026</div>
-
-                <div class="label">Weather</div>
-                <div class="value">Warm air, light wind, storm clouds by evening</div>
-
-                <div class="label">Reading</div>
-                <div class="value">
-                    The Virgin Suicides • chapter 5
-                </div>
-
-                <div class="label">Music</div>
-                <div class="value">
-                    Norman Fucking Rockwell! playing softly from the car radio
-                </div>
-
-            </div>
-
-            <div class="entry-text">
-
-                <p>
-                    Everything looked faded in the most beautiful way —
-                    the docks, the trees, even the denim jackets hanging
-                    over the fence posts. The lake reflected the clouds
-                    almost perfectly tonight.
-                </p>
-
-                <p>
-                    We stayed until after sunset reading quietly near the
-                    shoreline. Someone nearby was burning cedar wood and
-                    the smoke mixed with the humidity in the air.
-                </p>
-
-                <p>
-                    The whole evening felt strangely preserved, like
-                    something already becoming a memory while it was
-                    happening.
-                </p>
-
-            </div>
-
-
-
-  <div class="section-label">
-                entry no. 05
-            </div>
-
-            <h2 class="entry-title">
-                Late July
-            </h2>
-
-            <div class="details">
-
-                <div class="label">Date</div>
-                <div class="value">July 23, 2026</div>
-
-                <div class="label">Weather</div>
-                <div class="value">Warm air, light wind, storm clouds by evening</div>
-
-                <div class="label">Reading</div>
-                <div class="value">
-                    The Virgin Suicides • chapter 5
-                </div>
-
-                <div class="label">Music</div>
-                <div class="value">
-                    Norman Fucking Rockwell! playing softly from the car radio
-                </div>
-
-            </div>
-
-            <div class="entry-text">
-
-                <p>
-                    Everything looked faded in the most beautiful way —
-                    the docks, the trees, even the denim jackets hanging
-                    over the fence posts. The lake reflected the clouds
-                    almost perfectly tonight.
-                </p>
-
-                <p>
-                    We stayed until after sunset reading quietly near the
-                    shoreline. Someone nearby was burning cedar wood and
-                    the smoke mixed with the humidity in the air.
-                </p>
-
-                <p>
-                    The whole evening felt strangely preserved, like
-                    something already becoming a memory while it was
-                    happening.
-                </p>
-
-            </div>
-
-            <div class="quote">
-
-                “Summer’s meant for falling in love with places
-                you know you’ll miss later.”
-
-            </div>
-
-        </div>
-
-            <div class="quote">
-
-                “Summer’s meant for falling in love with places
-                you know you’ll miss later.”
-
-            </div>
+            <p>
+                It felt like the kind of memory that would become
+                important years later.
+            </p>
 
         </div>
 
     </section>
 
-    <footer class="footer">
-
-        <span>personal archive</span>
-
-        <span>page 04</span>
-
-    </footer>
+    <div class="footer">
+        PERSONAL ARCHIVE
+    </div>
 
 </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
