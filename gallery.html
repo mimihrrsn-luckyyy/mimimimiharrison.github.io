@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -18,7 +17,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
- }
+}
 
 body{
     min-height:100vh;
@@ -32,16 +31,10 @@ body{
     overflow-x:hidden;
 }
 
-
-
-
-    
 /* subtle vignette */
 
 body::before{
-
     content:"";
-
     position:fixed;
     inset:0;
 
@@ -53,133 +46,66 @@ body::before{
         );
 
     pointer-events:none;
-
 }
 
 /* page wrapper */
 
 .wrapper{
-
     width:min(1200px, 95%);
     margin:auto;
-
-    padding:
-        70px
-        0
-        120px;
-
+    padding:70px 0 120px;
 }
 
 /* main title */
 
 .page-title{
-
     font-family:"Pinyon Script", cursive;
-
     font-size:clamp(5rem, 10vw, 9rem);
-
     font-weight:400;
-
+    letter-spacing:0.5px;
     text-align:center;
-
     margin-bottom:10px;
 
     background:linear-gradient(
         to bottom,
-        #fffbe2 0%,
-        #ffe88d 20%,
-        #f6d36d 45%,
-        #d9a63e 70%,
-        #fff1af 100%
+        #fff8d6 0%,
+        #ffe88a 18%,
+        #f3cf58 38%,
+        #c89a2b 55%,
+        #fff0a8 72%,
+        #a97816 100%
     );
 
     -webkit-background-clip:text;
+    background-clip:text;
     -webkit-text-fill-color:transparent;
 
     text-shadow:
+        0 -1px 0 rgba(255,255,220,.9),
+        1px 1px 2px rgba(212,169,58,.45),
+        2px 2px 4px rgba(193,141,34,.25),
+        0 0 10px rgba(255,230,120,.55),
+        0 0 24px rgba(255,220,90,.35),
+        0 0 50px rgba(255,210,90,.18),
+        4px 4px 10px rgba(0,0,0,.18);
 
-        0 0 10px rgba(255,223,120,.8),
-        0 0 25px rgba(255,208,90,.55),
-        0 0 50px rgba(255,190,70,.25),
+    transform:rotate(-1deg);
 
-        3px 4px 10px rgba(0,0,0,.18);
-
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
 }
-
-
-
-
-
-.page-title{
-  font-family:"Pinyon Script", cursive;
-
-  font-size: clamp(5rem, 10vw, 9rem);
-  font-weight:400;
-
-  letter-spacing:0.5px;
-
-  background: linear-gradient(
-    to bottom,
-    #fff8d6 0%,
-    #ffe88a 18%,
-    #f3cf58 38%,
-    #c89a2b 55%,
-    #fff0a8 72%,
-    #a97816 100%
-  );
-
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-
-  text-shadow:
-
-    /* glossy top highlight */
-    0 -1px 0 rgba(255,255,220,0.9),
-
-    /* soft golden depth */
-    1px 1px 2px rgba(212,169,58,.45),
-    2px 2px 4px rgba(193,141,34,.25),
-
-    /* warm bloom */
-    0 0 10px rgba(255,230,120,.55),
-    0 0 24px rgba(255,220,90,.35),
-    0 0 50px rgba(255,210,90,.18),
-
-    /* cinematic shadow */
-    4px 4px 10px rgba(0,0,0,.18);
-
-  transform: rotate(-1deg);
-
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-
-
-    
 
 /* subtitle */
 
 .subtitle{
-
     text-align:center;
-
     color:#f5ead1;
-
     font-family:"Courier New", monospace;
-
     letter-spacing:3px;
-
     font-size:.85rem;
-
     text-transform:uppercase;
-
     margin-bottom:80px;
-
 }
-
-
 
 .glossary{
     width:min(1300px, 92%);
@@ -193,21 +119,15 @@ body::before{
     gap:55px;
 }
 
-
-
 .fortune{
     position:relative;
-
     width:260px;
-
     transition:.3s ease;
 }
 
 .fortune:hover{
     transform:translateY(-6px) rotate(0deg) !important;
 }
-
-
 
 .fortune img{
     width:100%;
@@ -217,49 +137,28 @@ body::before{
         drop-shadow(0 8px 18px rgba(70,45,20,.12));
 }
 
-
-
-
 .fortune-text{
-    font-family:"Cormorant Garamond", cursive;
     position:absolute;
-
     top:50%;
     left:50%;
-
     transform:translate(-50%, -50%);
-
     width:72%;
-
     text-align:center;
-
     color:#303D6B;
 }
 
-
-
-
 .fortune-text h2{
-    font-family:"Cormorant Garamond", cursive;
     font-size:1rem;
     font-weight:normal;
-
     color:#303D6B;
-
     margin-bottom:12px;
 }
 
-
-
-
 .fortune-text p{
-    font-size:0.75rem;
+    font-size:.75rem;
     line-height:1;
     letter-spacing:.02em;
 }
-
-
-
 
 .fortune:nth-child(odd){
     transform:rotate(-2deg);
@@ -282,153 +181,120 @@ body::before{
 
 <body>
 
-    <div class="wrapper">
+<div class="wrapper">
 
     <h1 class="page-title">
-     summer poetry
+        summer poetry
     </h1>
 
     <div class="subtitle">
         june — august 2026
     </div>
 
-<section class="glossary">
+    <section class="glossary">
 
-    <!-- POEM 1 -->
+        <!-- POEM 1 -->
 
-    <div class="fortune">
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Ague</h2>
-            <p>mosquito poem</p>
+            <div class="fortune-text">
+                <h2>Ague</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+        <!-- POEM 2 -->
 
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-
-    <!-- POEM 2 -->
-
-    <div class="fortune">
-
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Ineffable</h2>
-            <p>perception poem</p>
+            <div class="fortune-text">
+                <h2>Ineffable</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+        <!-- POEM 3 -->
 
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-
-    <!-- POEM 3 -->
-
-    <div class="fortune">
-
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Great Darke Pilgrimage</h2>
-            <p>hitchhiking poem</p>
+            <div class="fortune-text">
+                <h2>Great Darke Pilgrimage</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+        <!-- POEM 4 -->
 
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-
-    <!-- POEM 4 -->
-
-    <div class="fortune">
-
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Bitterroot Mythos</h2>
-            <p>smokejumper poem</p>
+            <div class="fortune-text">
+                <h2>Bitterroot Mythos</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+        <!-- POEM 5 -->
 
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-
-    <!-- POEM 5 -->
-
-    <div class="fortune">
-
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Rubicon</h2>
-            <p></p>
+            <div class="fortune-text">
+                <h2>Rubicon</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+        <!-- POEM 6 -->
 
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-
-    <!-- POEM 6 -->
-
-    <div class="fortune">
-
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Wane</h2>
-            <p>old man poem</p>
+            <div class="fortune-text">
+                <h2>Wane</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+        <!-- POEM 7 -->
 
-    
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-    <!-- POEM 7 -->
-
-    <div class="fortune">
-
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Twilight Ode</h2>
-            <p>eeuuuh formerly nyctophobic remedy /nyctophilia</p>
+            <div class="fortune-text">
+                <h2>Twilight Ode</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+        <!-- POEM 8 -->
 
-    
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-    <!-- POEM 8 -->
-
-    <div class="fortune">
-
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Palimpsest Sea</h2>
-            <p>eeuuhhh formerly plea of the sea</p>
+            <div class="fortune-text">
+                <h2>Palimpsest Sea</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+        <!-- POEM 9 -->
 
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
 
-    
-    <!-- POEM 9 -->
-
-    <div class="fortune">
-
-        <img src="fort1.png" alt="fortune paper">
-
-        <div class="fortune-text">
-            <h2>Steady State</h2>
-            <p>pausing time poem</p>
+            <div class="fortune-text">
+                <h2>Steady State</h2>
+                <p></p>
+            </div>
         </div>
 
-    </div>
+    </section>
 
-
-</section>
+</div>
 
 </body>
 </html>
