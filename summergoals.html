@@ -1,43 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goals & Things to Definitely Do</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body{
-      margin:0;
-      min-height:100vh;
+<title>Summer Diary</title>
 
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      background:#f6efe4;
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
-      font-family:Georgia, serif;
-    }
+<style>
 
-    h1{
-      font-size:4rem;
-      margin-bottom:20px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    a{
-      color:black;
-      text-decoration:none;
-      font-size:1.2rem;
-    }
-  </style>
+body{
+    min-height:100vh;
+
+    background:
+        url("pinkfab.jpg") center/cover fixed;
+
+    font-family:"Cormorant Garamond", serif;
+    color:#5b4334;
+
+    overflow-x:hidden;
+}
+
+/* subtle vignette */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 45%,
+            rgba(0,0,0,.22) 100%
+        );
+
+    pointer-events:none;
+}
+
+/* page wrapper */
+
+.wrapper{
+    width:min(1200px, 95%);
+    margin:auto;
+    padding:70px 0 120px;
+}
+
+/* main title */
+
+.page-title{
+    font-family:"Pinyon Script", cursive;
+    font-size:clamp(5rem, 10vw, 9rem);
+    font-weight:400;
+    letter-spacing:0.5px;
+    text-align:center;
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        to bottom,
+        #fff8d6 0%,
+        #ffe88a 18%,
+        #f3cf58 38%,
+        #c89a2b 55%,
+        #fff0a8 72%,
+        #a97816 100%
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 -1px 0 rgba(255,255,220,.9),
+        1px 1px 2px rgba(212,169,58,.45),
+        2px 2px 4px rgba(193,141,34,.25),
+        0 0 10px rgba(255,230,120,.55),
+        0 0 24px rgba(255,220,90,.35),
+        0 0 50px rgba(255,210,90,.18),
+        4px 4px 10px rgba(0,0,0,.18);
+
+    transform:rotate(-1deg);
+
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
+
+/* subtitle */
+
+.subtitle{
+    text-align:center;
+    color:#f5ead1;
+    font-family:"Courier New", monospace;
+    letter-spacing:3px;
+    font-size:.85rem;
+    text-transform:uppercase;
+    margin-bottom:80px;
+}
+
+.glossary{
+    width:min(1300px, 92%);
+    margin:auto;
+
+    padding:50px 0 100px;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:55px;
+}
+
+.fortune{
+    position:relative;
+    width:260px;
+    transition:.3s ease;
+}
+
+.fortune:hover{
+    transform:translateY(-6px) rotate(0deg) !important;
+}
+
+.fortune img{
+    width:100%;
+    display:block;
+
+    filter:
+        drop-shadow(0 8px 18px rgba(70,45,20,.12));
+}
+
+.fortune-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:72%;
+    text-align:center;
+    color:#303D6B;
+}
+
+.fortune-text h2{
+    font-size:1rem;
+    font-weight:normal;
+    color:#303D6B;
+    margin-bottom:12px;
+}
+
+.fortune-text p{
+    font-size:.75rem;
+    line-height:1;
+    letter-spacing:.02em;
+}
+
+.fortune:nth-child(odd){
+    transform:rotate(-2deg);
+}
+
+.fortune:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.fortune:nth-child(3n){
+    transform:rotate(-4deg);
+}
+
+.fortune:nth-child(5n){
+    transform:rotate(1deg);
+}
+
+</style>
 </head>
 
 <body>
 
-  <h1>Goals & Things to Definitely Do</h1>
+<div class="wrapper">
 
-  <a href="index.html">← Back Home</a>
+    <h1 class="page-title">
+        summer poetry collection
+    </h1>
+
+    <div class="subtitle">
+        june — august 2026
+    </div>
+
+    <section class="glossary">
+
+        <!-- POEM 1 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Ague</h2>
+                <p>mosquito poem</p>
+            </div>
+        </div>
+
+        <!-- POEM 2 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Ineffable</h2>
+                <p>perception poem</p>
+            </div>
+        </div>
+
+        <!-- POEM 3 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Great Darke Pilgrimage</h2>
+                <p>hitchhiking poem</p>
+            </div>
+        </div>
+
+        <!-- POEM 4 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Bitterroot Mythos</h2>
+                <p>smokejumper poem</p>
+            </div>
+        </div>
+
+        <!-- POEM 5 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Rubicon</h2>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- POEM 6 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Wane</h2>
+                <p>old man poem</p>
+            </div>
+        </div>
+
+        <!-- POEM 7 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Twilight Ode</h2>
+                <p>eeuuuh formerly nyctophobic remedy /nyctophilia</p>
+            </div>
+        </div>
+
+        <!-- POEM 8 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Palimpsest Sea</h2>
+                <p>eeuuhhh formerly plea of the sea</p>
+            </div>
+        </div>
+
+        <!-- POEM 9 -->
+
+        <div class="fortune">
+            <img src="fort1.png" alt="fortune paper">
+
+            <div class="fortune-text">
+                <h2>Steady State</h2>
+                <p>pausing time poem</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
 
 </body>
 </html>
