@@ -23,11 +23,8 @@ body{
     min-height:100vh;
     background:url("pinkfab.jpg") center/cover fixed;
     font-family:"Cormorant Garamond", serif;
-    color:#4d3b2d;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:70px 20px;
+    color:#5b4334;
+    overflow-x:hidden;
 }
 
 body::before{
@@ -35,66 +32,90 @@ body::before{
     position:fixed;
     inset:0;
     background:
-        radial-gradient(circle,
-        transparent 45%,
-        rgba(0,0,0,.22) 100%);
+        radial-gradient(
+            circle,
+            transparent 45%,
+            rgba(0,0,0,.22) 100%
+        );
     pointer-events:none;
 }
 
-.paper{
-
-    position:relative;
-    width:min(760px,95%);
-    background:rgba(255,250,242,.92);
-
-    padding:70px 65px;
-
-    border-radius:6px;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.18),
-        0 0 30px rgba(255,255,255,.15);
-
-    backdrop-filter:blur(3px);
-
+.wrapper{
+    width:min(900px,92%);
+    margin:auto;
+    padding:70px 0 120px;
 }
 
-.paper::before{
-
-    content:"";
-    position:absolute;
-    inset:18px;
-    border:1px solid rgba(165,132,80,.28);
-    pointer-events:none;
-
-}
-
-h1{
-
+.page-title{
     font-family:"Pinyon Script", cursive;
-    font-size:4.8rem;
+    font-size:clamp(5rem,10vw,9rem);
+    font-weight:400;
     text-align:center;
-    margin-bottom:18px;
+    margin-bottom:10px;
 
     background:linear-gradient(
         to bottom,
-        #fff8d6,
-        #f4d36a,
-        #c49427,
-        #fff2af
+        #fff8d6 0%,
+        #ffe88a 18%,
+        #f3cf58 38%,
+        #c89a2b 55%,
+        #fff0a8 72%,
+        #a97816 100%
     );
 
     -webkit-background-clip:text;
+    background-clip:text;
     -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 -1px 0 rgba(255,255,220,.9),
+        1px 1px 2px rgba(212,169,58,.45),
+        2px 2px 4px rgba(193,141,34,.25),
+        0 0 10px rgba(255,230,120,.55),
+        0 0 24px rgba(255,220,90,.35),
+        0 0 50px rgba(255,210,90,.18),
+        4px 4px 10px rgba(0,0,0,.18);
+
+    transform:rotate(-1deg);
+}
+
+.subtitle{
+    text-align:center;
+    color:#f5ead1;
+    font-family:"Courier New", monospace;
+    letter-spacing:3px;
+    font-size:.85rem;
+    text-transform:uppercase;
+    margin-bottom:50px;
+}
+
+.poem-paper{
+
+    width:min(760px,100%);
+    margin:auto;
+
+    background:rgba(255,249,241,.86);
+
+    padding:70px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.12),
+        inset 0 0 0 1px rgba(183,143,82,.18);
+
+    backdrop-filter:blur(2px);
 
 }
 
-.divider{
+.poem-title{
 
-    width:120px;
-    height:1px;
-    background:#c8aa74;
-    margin:0 auto 40px;
+    font-family:"Pinyon Script", cursive;
+    font-size:3.5rem;
+    text-align:center;
+    color:#7c5a34;
+
+    margin-bottom:35px;
 
 }
 
@@ -102,92 +123,103 @@ h1{
 
     white-space:pre-wrap;
 
-    font-size:1.28rem;
-    line-height:2;
+    font-size:1.35rem;
 
-    letter-spacing:.02em;
+    line-height:2.1;
+
+    text-align:left;
+
+    color:#5b4334;
 
 }
 
 .back{
 
     display:block;
-    margin-top:55px;
 
     text-align:center;
 
-    text-decoration:none;
-
-    color:#7d5a3b;
+    margin-top:55px;
 
     font-size:1rem;
 
-    transition:.25s;
+    letter-spacing:2px;
+
+    color:#f5ead1;
+
+    text-decoration:none;
+
+    transition:.3s;
 
 }
 
 .back:hover{
 
-    letter-spacing:2px;
+    opacity:.7;
 
 }
 
-@media(max-width:700px){
+@media (max-width:700px){
 
-.paper{
-padding:45px 30px;
-}
+.poem-paper{
 
-h1{
-font-size:3.3rem;
+padding:40px 28px;
+
 }
 
 .poem{
-font-size:1.08rem;
-line-height:1.8;
+
+font-size:1.1rem;
+
+line-height:1.9;
+
+}
+
+.poem-title{
+
+font-size:2.8rem;
+
 }
 
 }
 
 </style>
-
 </head>
+
 <body>
 
-<div class="paper">
+<div class="wrapper">
 
-<h1>Great Darke Pilgrimage</h1>
+<h1 class="page-title">
+summer poetry
+</h1>
 
-<div class="divider"></div>
+<div class="subtitle">
+A SINGLE POEM
+</div>
+
+<div class="poem-paper">
+
+<div class="poem-title">
+Poem Title
+</div>
 
 <div class="poem">
 
-The road that I walk
-Lay in arable land.
-Home to many a crop 
-Tilled with rural farmhand. 
+Paste your poem here.
 
+Leave blank lines between stanzas.
 
-A sea of tall corn 
-Rustles gently in the wind, 
-As the last stars fade
-On the only place I've lived.
-
-
-Farewell to my home 
-As the dawn kisses night
-My little white farmhouse
-Pink in dawn's early light.
-
-
-To pilgrimage West, 
-Hitchhike one-twenty-seven.
-My rural escape
-Towards American heaven. 
+The formatting will be preserved exactly because of
+white-space: pre-wrap;
 
 </div>
 
-<a class="back" href="gallery.html">← Return to Summer Poetry</a>
+</div>
+
+<a href="gallery.html" class="back">
+← RETURN TO GALLERY
+</a>
 
 </div>
 
