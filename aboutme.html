@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:url("pinkfab.jpg") center/cover fixed;
+    font-family:"Cormorant Garamond",serif;
+    color:#5b4334;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(
+            circle,
+            transparent 45%,
+            rgba(0,0,0,.22) 100%
+        );
+    pointer-events:none;
+}
+
+.wrapper{
+    width:min(950px,92%);
+    margin:auto;
+    padding:70px 0 100px;
+}
+
+.page-title{
+
+    font-family:"Pinyon Script",cursive;
+    font-size:clamp(2.8rem,5vw,4.8rem);
+    font-weight:400;
+    text-align:center;
+    margin-bottom:25px;
+
+    background:linear-gradient(
+        to bottom,
+        #fff8d6,
+        #ffe88a 18%,
+        #f3cf58 38%,
+        #c89a2b 55%,
+        #fff0a8 72%,
+        #a97816
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 -1px 0 rgba(255,255,220,.9),
+        1px 1px 2px rgba(212,169,58,.45),
+        2px 2px 4px rgba(193,141,34,.25),
+        0 0 10px rgba(255,230,120,.55),
+        4px 4px 10px rgba(0,0,0,.18);
+
+    transform:rotate(-1deg);
+
+}
+
+.paper{
+
+    background:rgba(255,249,241,.88);
+
+    padding:60px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.12),
+        inset 0 0 0 1px rgba(183,143,82,.18);
+
+    backdrop-filter:blur(2px);
+
+}
+
+.intro{
+
+    display:flex;
+    gap:45px;
+    align-items:center;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+
+}
+
+.profile-photo{
+
+    width:260px;
+    border-radius:12px;
+
+    border:8px solid rgba(255,255,255,.75);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.bio{
+
+    flex:1;
+    min-width:250px;
+    font-size:1.2rem;
+    line-height:1.8;
+
+}
+
+.section-title{
+
+    text-align:center;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin:45px 0 30px;
+    font-size:1.25rem;
+
+}
+
+.gallery{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+
+}
+
+.gallery img{
+
+    width:100%;
+    display:block;
+
+    border-radius:10px;
+
+    border:8px solid rgba(255,255,255,.75);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+}
+
+.gallery img:hover{
+
+    transform:translateY(-6px) scale(1.02);
+
+}
+
+.caption{
+
+    text-align:center;
+    margin-top:8px;
+    font-style:italic;
+    font-size:.95rem;
+
+}
+
+.back{
+
+    display:block;
+    text-align:center;
+    margin-top:35px;
+    color:#f5ead1;
+    letter-spacing:2px;
+    text-decoration:none;
+
+}
+
+.back:hover{
+
+    opacity:.75;
+
+}
+
+@media(max-width:700px){
+
+.paper{
+    padding:30px;
+}
+
+.intro{
+    justify-content:center;
+    text-align:center;
+}
+
+.profile-photo{
+    width:220px;
+}
+
+.bio{
+    font-size:1.1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<h1 class="page-title">
+About Me
+</h1>
+
+<div class="paper">
+
+<div class="intro">
+
+<img src="me1.jpg" class="profile-photo" alt="Portrait of Mimi Harrison">
+
+<div class="bio">
+
+<p>
+Hello! I'm Mimi Harrison, a physicist and aspiring astrophysicist with interests spanning galaxy evolution, heliophysics, plasma physics, and computational modeling. My work combines observation, simulation, and data analysis to better understand our universe—from energetic particles near astrophysical shocks to galaxies that formed billions of years ago.
+</p>
+
+<br>
+
+<p>
+Outside of research, I enjoy writing poetry, observing the night sky, exploring mountains and forests, photography, and sharing science with others through outreach and mentorship. This website is a small collection of my academic work, creative writing, photography, and personal interests.
+</p>
+
+</div>
+
+</div>
+
+<h2 class="section-title">
+A Few Moments
+</h2>
+
+<div class="gallery">
+
+<div>
+<img src="me2.jpg" alt="At a conference">
+<div class="caption">
+Presenting research
+</div>
+</div>
+
+<div>
+<img src="me3.jpg" alt="At a telescope">
+<div class="caption">
+Observing the night sky
+</div>
+</div>
+
+<div>
+<img src="me4.jpg" alt="In nature">
+<div class="caption">
+Outside the laboratory
+</div>
+</div>
+
+<div>
+<img src="me5.jpg" alt="Portrait">
+<div class="caption">
+One of my favorite photographs
+</div>
+</div>
+
+</div>
+
+</div>
+
+<a href="index.html" class="back">
+← RETURN HOME
+</a>
+
+</div>
+
+</body>
+</html>
