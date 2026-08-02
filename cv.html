@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Poem Title</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:url("pinkfab.jpg") center/cover fixed;
+    font-family:"Cormorant Garamond", serif;
+    color:#5b4334;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(
+            circle,
+            transparent 45%,
+            rgba(0,0,0,.22) 100%
+        );
+    pointer-events:none;
+}
+
+.wrapper{
+    width:min(900px,92%);
+    margin:auto;
+    padding:70px 0 120px;
+}
+
+.page-title{
+    font-family:"Pinyon Script", cursive;
+    font-size:clamp(2.5rem, 5vw, 4.5rem);
+    font-weight:400;
+    text-align:center;
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        to bottom,
+        #fff8d6 0%,
+        #ffe88a 18%,
+        #f3cf58 38%,
+        #c89a2b 55%,
+        #fff0a8 72%,
+        #a97816 100%
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 -1px 0 rgba(255,255,220,.9),
+        1px 1px 2px rgba(212,169,58,.45),
+        2px 2px 4px rgba(193,141,34,.25),
+        0 0 10px rgba(255,230,120,.55),
+        0 0 24px rgba(255,220,90,.35),
+        0 0 50px rgba(255,210,90,.18),
+        4px 4px 10px rgba(0,0,0,.18);
+
+    transform:rotate(-1deg);
+}
+
+
+
+.poem-paper{
+
+    width:min(760px,100%);
+    margin:auto;
+
+    background:rgba(255,249,241,.86);
+
+    padding:70px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.12),
+        inset 0 0 0 1px rgba(183,143,82,.18);
+
+    backdrop-filter:blur(2px);
+
+}
+
+
+.poem{
+
+    white-space:pre-wrap;
+
+    font-size:1.2rem;
+
+    line-height:1.2;
+
+    text-align:left;
+
+    color:#5b4334;
+
+}
+
+.back{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:1px;
+
+    font-size:1rem;
+
+    letter-spacing:2px;
+
+    color:#f5ead1;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.back:hover{
+
+    opacity:.7;
+
+}
+
+@media (max-width:700px){
+
+.poem-paper{
+
+padding:28px 28px;
+
+}
+
+.poem{
+
+font-size:1.1rem;
+
+line-height:1.2;
+
+}
+
+
+
+    
+
+.cv-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.cv-name{
+    font-size:3rem;
+    font-weight:500;
+    letter-spacing:2px;
+}
+
+.cv-contact{
+    margin-top:10px;
+    font-size:1rem;
+}
+
+.cv-contact a{
+    color:#5b4334;
+    text-decoration:none;
+}
+
+.cv-contact a:hover{
+    text-decoration:underline;
+}
+
+hr{
+    border:none;
+    border-top:1px solid rgba(91,67,52,.25);
+    margin:30px 0;
+}
+
+.section-title{
+    font-size:1.25rem;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    color:#5b4334;
+}
+
+.cv-item{
+    margin-bottom:28px;
+}
+
+.cv-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.cv-left h3{
+    font-size:1.25rem;
+    font-weight:600;
+}
+
+.cv-left h4{
+    font-size:1.05rem;
+    font-weight:500;
+    font-style:italic;
+    margin-top:2px;
+}
+
+.cv-date{
+    white-space:nowrap;
+    font-style:italic;
+}
+
+.cv-description{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.cv-description li{
+    margin-bottom:7px;
+    line-height:1.45;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    row-gap:16px;
+    column-gap:25px;
+}
+
+.skills-grid strong{
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+
+
+    
+
+
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cv-paper">
+
+    <header class="cv-header">
+
+        <h1 class="cv-name">Mimi Harrison</h1>
+
+        <div class="cv-contact">
+            +1 (937) 267-1681 •
+            mh26e@fsu.edu •
+            <a href="#">LinkedIn</a>
+        </div>
+
+    </header>
+
+    <hr>
+
+    <section>
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <div class="cv-item">
+
+            <div class="cv-row">
+
+                <div class="cv-left">
+
+                    <h3>Rochester Institute of Technology</h3>
+
+                    <h4>Physics B.S.</h4>
+
+                </div>
+
+                <div class="cv-date">
+                    Aug. 2021 – Aug. 2026
+                </div>
+
+            </div>
+
+            <p><strong>Minors:</strong> Astronomy, Mathematics</p>
+
+            <p><strong>Immersion:</strong> Mathematics</p>
+
+            <p><strong>Senior Thesis:</strong> Identifying Massive Quiescent Galaxy Candidates at 2.5&lt;z&lt;5 with COSMOS-Web.</p>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
