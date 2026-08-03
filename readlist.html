@@ -1,808 +1,259 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Summer Reading</title>
+<title>Summer Reading</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&family=Cormorant+Garamond&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Special+Elite&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+<style>
 
-  <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      min-height:100vh;
-
-      background:
+body {
+    min-height: 100vh;
+    background:
         linear-gradient(rgba(10,10,10,0.22), rgba(10,10,10,0.22)),
         url("whitepapercrump.jpg") center/cover fixed;
 
-      font-family:"Special Elite", monospace;
-
-      color:#8F0425;
-
-      padding:80px 20px;
-    }
-
-    .page{
-      width:min(900px, 100%);
-      margin:auto;
-    }
-
-    h1{
-      font-family:"Great Vibes", cursive;
-
-      font-size:5rem;
-      font-weight:400;
-
-      text-align:center;
-
-      margin-bottom:70px;
-
-      color:#ffd7e8;
-
-      text-shadow:
-        0 0 10px rgba(255,220,230,0.45),
-        0 0 30px rgba(255,190,220,0.25);
-    }
-
-    .subtitle{
-      text-align:center;
-
-      font-size:1rem;
-      letter-spacing:1px;
-
-      margin-top:-45px;
-      margin-bottom:55px;
-
-      color:#8F0425;
-    }
-
-.glossary-link{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  width:100%;
-
-  margin:-10px auto 65px;
-
-  text-decoration:none;
-
-  position:relative;
+    font-family: "Special Elite", monospace;
+    color: #8F0425;
+    padding: 80px 20px;
 }
 
-.glossary-link img{
-  width:220px;
-
-  height:auto;
-
-  display:block;
-
-  margin:0 auto -18px auto;
-
-  filter:
-    drop-shadow(0 8px 14px rgba(0,0,0,0.28));
+.page {
+    width: min(900px, 100%);
+    margin: auto;
 }
 
-.glossary-text{
-  width:100%;
-
-  text-align:center;
-
-  font-family:"Cormorant Garamond", cursive;
-  font-size:1.2rem;
-
-  line-height:1;
-
-  color:#303D6B;
-
-  text-shadow:
-    0 0 10px rgba(255,220,230,0.35);
+.book {
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+    padding: 24px;
+    background: url("tornpiece.png") center/cover no-repeat;
+    position: relative;
 }
 
-.glossary-link span{
-  position:absolute;
-
-  top:50%;
-  left:50%;
-
-  transform:translate(-50%, -50%);
-
-  font-family:"Cormorant Garamond", cursive;
-  font-size:1.2rem;
-
-  color:#1D1F43;
-
-  text-shadow:
-    0 0 10px rgba(255,220,230,0.35);
-
-  letter-spacing:1px;
+.book img {
+    height: 260px;
+    width: auto;
+    margin-left: 75px;
+    border-radius: 3px;
+    display: block;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.35);
 }
 
-.glossary-link:hover{
-  transform:translateY(-3px) rotate(-2deg);
-  opacity:0.9;
+.info {
+    margin-left: 15px;
 }
 
-.book{
-  display:flex;
-
-  margin-bottom:55px;
-  padding:24px;
-
-  background: url("tornpiece.png") center/cover no-repeat;
-
-  border-radius:0;
-
-  position:relative;
+.info h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #8F0425;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(255,220,230,0.25);
 }
 
-.book img{
-  height:260px;      
-  width:auto;       
-  
-  margin-left:75px;
-
-  border-radius:3px;
-
-  display:block;
-
-  box-shadow:
-    0 8px 18px rgba(0,0,0,0.35);
+.author {
+    font-size: 0.75rem;
+    color: #8F0425;
+    letter-spacing: 1px;
 }
 
-    .info h2{
-      font-family:"Great Vibes", cursive;
+@media (max-width: 700px) {
 
-      font-size:2.0rem;
-      font-weight:400;
-      margin-left:15px;
-
-      color:#8F0425;
-
-      margin-bottom:10px;
-
-      text-shadow:
-        0 0 8px rgba(255,220,230,0.25);
+    .book {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .author{
-      font-size:0.75rem;
-      opacity:1;
-      margin-left:15px;
-      color:#8F0425;
-
-      margin-bottom:16px;
-
-      letter-spacing:1px;
+    .book img {
+        width: 170px;
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 15px;
     }
 
-
-
-    .notes{
-      font-size:0.75rem;
-      line-height:1.7;
-      margin-left:15px;
-
-      color:#8F0425;
-
-      opacity:1;
+    .info {
+        margin-left: 0;
     }
 
-    .pages{
-      font-size:0.75rem;
-      opacity:1;
-      margin-left:15px;
-      color:#8F0425;
+}
 
-      margin-bottom:16px;
-
-      letter-spacing:1px;
-    }
-    
-    .progress{
-      font-size:0.75rem;
-      line-height:1.7;
-      margin-left:15px;
-
-      color:#8F0425;
-
-      opacity:1;
-    }
-
-    .home{
-      display:block;
-
-      width:fit-content;
-
-      margin:70px auto 0;
-
-      color:#ffe6ef;
-
-      text-decoration:none;
-
-      font-size:1rem;
-
-      opacity:0.75;
-    }
-
-    .home:hover{
-      opacity:1;
-    }
-
-    @media (max-width:700px){
-
-      .book{
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
-      }
-
-      .book img{
-        width:170px;
-      }
-
-    }
-
-  </style>
+</style>
 </head>
-
 
 <body>
 
-  <div class="page">
-
-    <h1>Summer Reading</h1>
-    <p class="subtitle"></p>
-
-    <a class="glossary-link" href="glossary2.html">
-      <img src="fort1.png" alt="Glossary Fortune Cookie">
-      <span>glossary</span>
-    </a>
+<div class="page">
 
     <div class="book">
-
-      <img src="book1.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Água Viva</h2>
-
-        <div class="author">
-          Clarice Lispector
+        <img src="book1.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Água Viva</h2>
+            <div class="author">Clarice Lispector</div>
         </div>
-
-        <div class="notes">
-          "a lyrical, plotless interior monologue from a female painter exploring self-discovery, language, and existence. The text is a stream-of-consciousness exploration of art, life, and the limits of language, written as a letter to an unnamed "you," and is known for its challenging, philosophical, and poetic style. "
-        </div>
-        <div class="pages">
-          Pages: 88
-        </div>
-        <div class="progress">
-          Progress: began
-        </div>
-      </div>
-
     </div>
 
     <div class="book">
-
-      <img src="book2.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>The Passion According to G.H.</h2>
-
-        <div class="author">
-          Clarice Lispector
+        <img src="book2.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>The Passion According to G.H.</h2>
+            <div class="author">Clarice Lispector</div>
         </div>
-
-        <div class="notes">
-          "G.H., a well-to-do Rio sculptress, enters the room of her maid, which is as clear and white 'as in an insane asylum from which dangerous objects have been removed'. There she sees a cockroach - black, dusty, prehistoric - crawling out of the wardrobe and, panicking, slams the door on it. Her irresistible fascination with the dying insect provokes a spiritual crisis within, in which she questions her place in the universe and her very identity, propelling her towards an act of shocking transgression. Clarice Lispector's spare, deeply disturbing yet luminous novel transforms language into something otherworldly, and is one of her most unsettling and compelling works."
-        </div>
-        
-        <div class="pages">
-          Pages: 173
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
     <div class="book">
-
-      <img src="book3.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Into the Wild</h2>
-
-        <div class="author">
-          Jon Krakauer
+        <img src="book3.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Into the Wild</h2>
+            <div class="author">Jon Krakauer</div>
         </div>
-        <div class="notes">
-          "In April, 1992, a young man from a well-to-do family hitchhiked to Alaska and walked alone into the wilderness north of Mt. McKinley. His name was Christopher Johnson McCandless. He had given $25,000 in savings to charity, abandoned his car and most of his possessions, burned all the cash in his wallet, and invented a new life for himself. Four months later, a party of moose hunters found his decomposed body. How McCandless came to die is the unforgettable story of Into the Wild."
-        </div>
-        
-        <div class="pages">
-          Pages: 207
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
     <div class="book">
-
-      <img src="book4.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Stoner</h2>
-
-        <div class="author">
-          John Williams
+        <img src="book4.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Stoner</h2>
+            <div class="author">John Williams</div>
         </div>
-
-        <div class="notes">
-          "William Stoner is born at the end of the nineteenth century into a dirt-poor Missouri farming family. Sent to the state university to study agronomy, he instead falls in love with English literature and embraces a scholar’s life, so different from the hardscrabble existence he has known. And yet as the years pass, Stoner encounters a succession of disappointments: marriage into a “proper” family estranges him from his parents; his career is stymied; his wife and daughter turn coldly away from him; a transforming experience of new love ends under threat of scandal. Driven ever deeper within himself, Stoner rediscovers the stoic silence of his forebears and confronts an essential solitude."
-        </div>
-        
-        <div class="pages">
-          Pages: 292
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="book">
-
-      <img src="book5.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Play It As It Lays</h2>
-
-        <div class="author">
-          Joan Didion
-        </div>
-
-        <div class="notes">
-          "A dissection of American life in the late 1960s, Play It As It Lays captures the mood of an entire generation. Maria Wyeth is an emotional drifter who has become almost anesthetized against pain and pleasure. She finds herself, in her early thirties, radically divorced from husband, lovers, friends, her own past and her own future. Actress, daughter, wife, mother, she has played each role to the sound of one hand clapping. Play It As It Lays is set in a place beyond good and evil, literally in Los Angeles and Las Vegas and the barren wastes of the Mojave, but figuratively in the landscape of an arid soul. Two decades after its original publication, it remains a profoundly disturbing novel."
-        </div>
-        
-        <div class="pages">
-          Pages: 214
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
     <div class="book">
-
-      <img src="book6.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>I Know Why The Caged Bird Sings</h2>
-
-        <div class="author">
-          Maya Angelou
+        <img src="book5.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Play It As It Lays</h2>
+            <div class="author">Joan Didion</div>
         </div>
-
-        <div class="notes">
-          "Maya Angelou’s debut memoir is a modern American classic beloved worldwide. Sent by their mother to live with their devout, self-sufficient grandmother in a small Southern town, Maya and her brother, Bailey, endure the ache of abandonment and the prejudice of the local “powhitetrash.” At eight years old and back at her mother’s side in St. Louis, Maya is attacked by a man many times her age—and has to live with the consequences for a lifetime. Years later, in San Francisco, Maya learns that love for herself, the kindness of others, her own strong spirit, and the ideas of great authors (“I met and fell in love with William Shakespeare”) will allow her to be free instead of imprisoned."
-        </div>
-        <div class="pages">
-          Pages: 289
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
-
 
     <div class="book">
-
-      <img src="book7.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>The Age of Reason</h2>
-
-        <div class="author">
-          Jean-Paul Sartre
+        <img src="book6.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>I Know Why The Caged Bird Sings</h2>
+            <div class="author">Maya Angelou</div>
         </div>
-
-        <div class="notes">
-          "The Age of Reason is set in 1938 and tells of Mathieu, a French professor of philosophy who is obsessed with the idea of freedom. As the shadows of the Second World War draw closer -- even as his personal life is complicated by his mistress's pregnancy -- his search for a way to remain free becomes more and more intense."
-        </div>
-        
-        <div class="pages">
-          Pages: 416
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-      
     </div>
-
-    
-    <div class="book">
-
-      <img src="book8.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>On The Road</h2>
-
-        <div class="author">
-          Jack Kerouac
-        </div>
-
-        <div class="notes">
-          "A quintessential novel of America & the Beat Generation On the Road chronicles Jack Kerouac's years traveling the N. American continent with his friend Neal Cassady, "a sideburned hero of the snowy West." As "Sal Paradise" & "Dean Moriarty," the two roam the country in a quest for self-knowledge & experience. Kerouac's love of America, compassion for humanity & sense of language as jazz combine to make On the Road an inspirational work of lasting importance. This classic novel of freedom & longing defined what it meant to be "Beat" & has inspired every generation since its initial publication."
-        </div>
-        
-        <div class="pages">
-          Pages: 307
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
-    </div>
-
 
     <div class="book">
-
-      <img src="book9.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Where the Crawdads Sing</h2>
-
-        <div class="author">
-          Delia Owens **reread
+        <img src="book7.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>The Age of Reason</h2>
+            <div class="author">Jean-Paul Sartre</div>
         </div>
-
-        <div class="notes">
-          "In Where the Crawdads Sing, Owens juxtaposes an exquisite ode to the natural world against a profound coming of age story and haunting mystery. Thought-provoking, wise, and deeply moving, Owens’s debut novel reminds us that we are forever shaped by the child within us, while also subject to the beautiful and violent secrets that nature keeps. The story asks how isolation influences the behavior of a young woman, who like all of us, has the genetic propensity to belong to a group. The clues to the mystery are brushed into the lush habitat and natural histories of its wild creatures."
-        </div>
-        
-        <div class="pages">
-          Pages: 384
-        </div>
-        <div class="progress">
-          Progress: 171/384
-        </div>
-      </div>
-
     </div>
 
-
-    
     <div class="book">
-
-      <img src="book10.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>The Importance of Being Earnest</h2>
-
-        <div class="author">
-          Oscar Wilde
+        <img src="book8.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>On The Road</h2>
+            <div class="author">Jack Kerouac</div>
         </div>
-
-        <div class="notes">
-          "Oscar Wilde's madcap farce about mistaken identities, secret engagements, and lovers entanglements still delights readers more than a century after its 1895 publication and premiere performance. "
-        </div>
-        
-        <div class="pages">
-          Pages: 89
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
-
-<!--    <div class="book">
-
-      <img src="book11.jpeg" alt="Book Cover">
-
-      <div class="info">
-        <h2>The Lover</h2>
-
-        <div class="author">
-          Marguerite Duras
-        </div>
-
-        <div class="notes">
-          "Set against the backdrop of French colonial Vietnam, The Lover reveals the intimacies and intricacies of a clandestine romance between a pubescent girl from a financially strapped French family and an older, wealthy Chinese-Vietnamese man."
-        </div>
-        
-        <div class="pages">
-          Pages: 117
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
-    </div>-->
-
-
-    
     <div class="book">
-
-      <img src="book12.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>The Remains of the Day</h2>
-
-        <div class="author">
-          Kazuo Ishiguro
+        <img src="book9.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Where the Crawdads Sing</h2>
+            <div class="author">Delia Owens</div>
         </div>
-
-        <div class="notes">
-          "In the summer of 1956, Stevens, a long-serving butler at Darlington Hall, decides to take a motoring trip through the West Country. The six-day excursion becomes a journey into the past of Stevens and England, a past that takes in fascism, two world wars, and an unrealised love between the butler and his housekeeper."
-        </div>
-        
-        <div class="pages">
-          Pages: 258
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
-
-  <div class="book">
-
-      <img src="book13.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>An Apprenticeship or The Book of Pleasures</h2>
-
-        <div class="author">
-          Clarice Lispector
+    <div class="book">
+        <img src="book10.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>The Importance of Being Earnest</h2>
+            <div class="author">Oscar Wilde</div>
         </div>
-
-        <div class="notes">
-          "What to make of a writer who follows the metaphysical heights of her great Passion According to GH with a book that looks suspiciously like a romance novel? In The Apprenticeship, or The Book of Pleasures, Clarice Lispector tries to discover how to bridge the gap between people, or how to even begin to try. A woman struggles to emerge from solitude and sadness into love, including sexual love: her guide on this journey is Ulisses, who (yes) leads her patiently into the fullness of life. The Apprenticeship was a bestseller and, as her biographer Benjamin Moser writes, "This accessible love story surprised many readers. When it came out, an interviewer said: 'I thought The Book of Pleasures was much easier to read than any of your other books. Do you think there’s any basis for that?' Clarice answered: 'There is. I humanized myself, the book reflects that.'”"
-        </div>
-        
-        <div class="pages">
-          Pages: 176
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
-
-
-  <div class="book">
-
-      <img src="book14.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>The Woman Destroyed</h2>
-
-        <div class="author">
-          Simone de Beauvoir
+    <div class="book">
+        <img src="book12.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>The Remains of the Day</h2>
+            <div class="author">Kazuo Ishiguro</div>
         </div>
-
-        <div class="notes">
-          "Three long stories that draw the reader into the lives of three women, all past their first youth, all facing unexpected crises."
-        </div>
-        
-        <div class="pages">
-          Pages: 254
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
-
-
-  <div class="book">
-
-      <img src="book15.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Giovanni’s Room</h2>
-
-        <div class="author">
-          James Baldwin
+    <div class="book">
+        <img src="book13.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>An Apprenticeship or The Book of Pleasures</h2>
+            <div class="author">Clarice Lispector</div>
         </div>
-
-        <div class="notes">
-          "Set in the contemporary Paris of American expatraites, liasons, and violence, a young man finds himself caught between desire and conventional morality. James Baldwin's brilliant narrative delves into the mystery of loving with a sharp, probing imagination, and he creates a moving, highly controversial story of death and passion that reveals the unspoken complexities of the heart."
-        </div>
-        
-        <div class="pages">
-          Pages: 178
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
-
-  <div class="book">
-
-      <img src="book16.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Steppenwolf</h2>
-
-        <div class="author">
-          Hermann Hesse
+    <div class="book">
+        <img src="book14.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>The Woman Destroyed</h2>
+            <div class="author">Simone de Beauvoir</div>
         </div>
-
-        <div class="notes">
-          "Steppenwolf is a poetical self-portrait of a man who felt himself to be half-human and half-wolf. This Faust-like and magical story is evidence of Hesse's searching philosophy and extraordinary sense of humanity as he tells of the humanization of a middle-aged misanthrope. Yet his novel can also be seen as a plea for rigorous self-examination and an indictment of the intellectual hypocrisy of the period. As Hesse himself remarked, "Of all my books Steppenwolf is the one that was more often and more violently misunderstood than any of the others"."
-        </div>
-        
-        <div class="pages">
-          Pages: 256
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
-  <div class="book">
-
-      <img src="book17.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Narcissus and Goldmund</h2>
-
-        <div class="author">
-          Hermann Hesse
+    <div class="book">
+        <img src="book15.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Giovanni’s Room</h2>
+            <div class="author">James Baldwin</div>
         </div>
-
-        <div class="notes">
-          "Narcissus and Goldmund tells the story of two medieval men whose characters are diametrically opposite: Narcissus, an ascetic monk firm in his religious commitment, and Goldmund, a romantic youth hungry for knowledge and worldly experience. First published in 1930, Hesse's novel remains a moving and pointed exploration of the conflict between the life of the spirit and the life of the flesh. It is a theme that transcends all time."
-        </div>
-        
-        <div class="pages">
-          Pages: 315
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
-  <div class="book">
-
-      <img src="book18.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Siddartha</h2>
-
-        <div class="author">
-          Hermann Hesse *reread
-        </div>
-
-        <div class="notes">
-          "Herman Hesse's classic novel has delighted, inspired, and influenced generations of readers, writers, and thinkers. In this story of a wealthy Indian Brahmin who casts off a life of privilege to seek spiritual fulfillment. Hesse synthesizes disparate philosophies--Eastern religions, Jungian archetypes, Western individualism--into a unique vision of life as expressed through one man's search for true meaning."
-        </div>
-        
-        <div class="pages">
-          Pages: 152
-        </div>
-        <div class="progress">
-          Progress: Done!
-        </div>
-      </div>
-
     </div>
 
-  <div class="book">
-
-      <img src="book19.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>Wurthering Heights</h2>
-
-        <div class="author">
-          Emily Brontë *need to finish
+    <div class="book">
+        <img src="book16.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Steppenwolf</h2>
+            <div class="author">Hermann Hesse</div>
         </div>
-
-        <div class="notes">
-          "A love forged from the winds, rain, and mud of the English moors. A passion that pierces walls and lurks through windows. A passion that defies death and haunts the living. A love akin to a supernatural energy that splits and takes form in two beings: Catherine and Heathcliff. The misty, shadowy moors of Yorkshire are the unique setting where this story of revenge, hatred, and desperate love unfolds with breathtaking force between its protagonists."
-        </div>
-        
-        <div class="pages">
-          Pages: 152
-        </div>
-        <div class="progress">
-          Progress:
-        </div>
-      </div>
-
     </div>
 
-
-  <div class="book">
-
-      <img src="book20.jpg" alt="Book Cover">
-
-      <div class="info">
-        <h2>The Blind Spot</h2>
-
-        <div class="author">
-          Adam Frank, Marcelo Gleiser, Evan Thompson
+    <div class="book">
+        <img src="book17.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Narcissus and Goldmund</h2>
+            <div class="author">Hermann Hesse</div>
         </div>
-
-        <div class="notes">
-          "A compelling argument for including the human perspective within science, and for how human experience makes science possible."
-        </div>
-        
-        <div class="pages">
-          Pages: 328
-        </div>
-        <div class="progress">
-          Progress: began
-        </div>
-      </div>
-
     </div>
 
-    <a class="home" href="index.html">
-      ← back home
-    </a>
+    <div class="book">
+        <img src="book18.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Siddartha</h2>
+            <div class="author">Hermann Hesse</div>
+        </div>
+    </div>
 
-  </div>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const page = document.querySelector(".page");
-  const books = Array.from(document.querySelectorAll(".book"));
+    <div class="book">
+        <img src="book19.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>Wuthering Heights</h2>
+            <div class="author">Emily Brontë</div>
+        </div>
+    </div>
 
-  books.sort((a, b) => {
-    const aText = a.querySelector(".pages").textContent;
-    const bText = b.querySelector(".pages").textContent;
+    <div class="book">
+        <img src="book20.jpg" alt="Book Cover">
+        <div class="info">
+            <h2>The Blind Spot</h2>
+            <div class="author">Adam Frank, Marcelo Gleiser, Evan Thompson</div>
+        </div>
+    </div>
 
-    const aPages = Number(aText.match(/\d+/)?.[0] || 0);
-    const bPages = Number(bText.match(/\d+/)?.[0] || 0);
+</div>
 
-    return aPages - bPages;
-  });
-
-  books.forEach(book => page.appendChild(book));
-});
-</script>
 </body>
 </html>
+
