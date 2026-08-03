@@ -46,22 +46,23 @@ body::before{
     padding:70px 0 100px;
 }
 
-.page-title{
 
-    font-family:"Pinyon Script",cursive;
-    font-size:clamp(2.8rem,5vw,4.8rem);
+
+.page-title{
+    font-family:"Pinyon Script", cursive;
+    font-size:clamp(2.5rem, 5vw, 4.5rem);
     font-weight:400;
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:10px;
 
     background:linear-gradient(
         to bottom,
-        #fff8d6,
+        #fff8d6 0%,
         #ffe88a 18%,
         #f3cf58 38%,
         #c89a2b 55%,
         #fff0a8 72%,
-        #a97816
+        #a97816 100%
     );
 
     -webkit-background-clip:text;
@@ -73,11 +74,14 @@ body::before{
         1px 1px 2px rgba(212,169,58,.45),
         2px 2px 4px rgba(193,141,34,.25),
         0 0 10px rgba(255,230,120,.55),
+        0 0 24px rgba(255,220,90,.35),
+        0 0 50px rgba(255,210,90,.18),
         4px 4px 10px rgba(0,0,0,.18);
 
     transform:rotate(-1deg);
-
 }
+
+    
 
 .paper{
 
