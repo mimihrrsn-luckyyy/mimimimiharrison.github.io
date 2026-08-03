@@ -1,37 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Summer Reading</title>
+  <title>Summer Reading</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<style>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Special+Elite&family=Cormorant+Garamond&display=swap" rel="stylesheet">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <style>
 
-body {
-    min-height: 100vh;
-    background:
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      min-height:100vh;
+
+      background:
         linear-gradient(rgba(10,10,10,0.22), rgba(10,10,10,0.22)),
         url("whitepapercrump.jpg") center/cover fixed;
 
-    font-family: "Special Elite", monospace;
-    color: #8F0425;
-    padding: 80px 20px;
+      font-family:"Special Elite", monospace;
+
+      color:#8F0425;
+
+      padding:80px 20px;
+    }
+
+    .page{
+      width:min(900px, 100%);
+      margin:auto;
+    }
+
+    h1{
+      font-family:"Great Vibes", cursive;
+
+      font-size:5rem;
+      font-weight:400;
+
+      text-align:center;
+
+      margin-bottom:70px;
+
+      color:#ffd7e8;
+
+      text-shadow:
+        0 0 10px rgba(255,220,230,0.45),
+        0 0 30px rgba(255,190,220,0.25);
+    }
+
+    .subtitle{
+      text-align:center;
+
+      font-size:1rem;
+      letter-spacing:1px;
+
+      margin-top:-45px;
+      margin-bottom:55px;
+
+      color:#8F0425;
+    }
+
+.glossary-link{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  width:100%;
+
+  margin:-10px auto 65px;
+
+  text-decoration:none;
+
+  position:relative;
 }
 
-.page {
-    width: min(900px, 100%);
-    margin: auto;
+.glossary-link img{
+  width:220px;
+
+  height:auto;
+
+  display:block;
+
+  margin:0 auto -18px auto;
+
+  filter:
+    drop-shadow(0 8px 14px rgba(0,0,0,0.28));
+}
+
+.glossary-text{
+  width:100%;
+
+  text-align:center;
+
+  font-family:"Cormorant Garamond", cursive;
+  font-size:1.2rem;
+
+  line-height:1;
+
+  color:#303D6B;
+
+  text-shadow:
+    0 0 10px rgba(255,220,230,0.35);
+}
+
+.glossary-link span{
+  position:absolute;
+
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%, -50%);
+
+  font-family:"Cormorant Garamond", cursive;
+  font-size:1.2rem;
+
+  color:#1D1F43;
+
+  text-shadow:
+    0 0 10px rgba(255,220,230,0.35);
+
+  letter-spacing:1px;
+}
+
+.glossary-link:hover{
+  transform:translateY(-3px) rotate(-2deg);
+  opacity:0.9;
 }
 
 .book {
