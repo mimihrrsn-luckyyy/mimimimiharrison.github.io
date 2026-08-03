@@ -40,47 +40,39 @@ header{
     padding-bottom:20px;
 }
 
+
+
 header h1{
-  font-family:"Pinyon Script", cursive;
+    font-family:"Pinyon Script", cursive;
+    font-size:clamp(5rem,10vw,9rem);
+    font-weight:400;
+    text-align:center;
+    margin-bottom:10px;
 
-  font-size: clamp(5rem, 10vw, 9rem);
+    background:linear-gradient(
+        to bottom,
+        #fff8d6 0%,
+        #ffe88a 18%,
+        #f3cf58 38%,
+        #c89a2b 55%,
+        #fff0a8 72%,
+        #a97816 100%
+    );
 
-  font-weight:400;
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
 
-  letter-spacing:2px;
+    text-shadow:
+        0 -1px 0 rgba(255,255,220,.9),
+        1px 1px 2px rgba(212,169,58,.45),
+        2px 2px 4px rgba(193,141,34,.25),
+        0 0 10px rgba(255,230,120,.55),
+        0 0 24px rgba(255,220,90,.35),
+        0 0 50px rgba(255,210,90,.18),
+        4px 4px 10px rgba(0,0,0,.18);
 
-  background: linear-gradient(
-    to bottom,
-    #fff8d6 0%,
-    #ffe88a 18%,
-    #f3cf58 38%,
-    #c89a2b 55%,
-    #fff0a8 72%,
-    #a97816 100%
-  );
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-  text-shadow:
-
-    /* glossy top highlight */
-    0px -1px 0px rgba(255,255,220,0.9),
-
-    /* soft puffy thickness */
-    1px 1px 0px #d4a93a,
-    2px 2px 0px #c18d22,
-    3px 3px 0px #9f6f12,
-
-    /* soft outer bloom */
-    0 0 8px rgba(255,230,120,0.55),
-    0 0 18px rgba(255,220,90,0.35),
-
-    /* cinematic shadow */
-    5px 5px 12px rgba(0,0,0,0.22);
-
-  filter: blur(0.25px);
-
-  transform: rotate(-1deg);
+    transform:rotate(-1deg);
 }
 
 header p{
