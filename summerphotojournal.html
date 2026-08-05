@@ -32,7 +32,7 @@ body{
 }
 
 
-/* soft darkening around the edges */
+/* SOFT DARKENING AROUND THE EDGES */
 
 body::before{
     content:"";
@@ -54,7 +54,7 @@ body::before{
 /* PAGE CONTAINER */
 
 .wrapper{
-    width:min(950px,92%);
+    width:min(1200px,92%);
 
     margin:auto;
 
@@ -73,7 +73,7 @@ body::before{
 
     text-align:center;
 
-    margin-bottom:25px;
+    margin-bottom:45px;
 
     background:linear-gradient(
         to bottom,
@@ -103,31 +103,41 @@ body::before{
 }
 
 
-/* PHOTO */
+/* =================================================
+   PHOTO GRID
+   ================================================= */
+
+.photo-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    gap:45px 35px;
+
+    align-items:start;
+}
+
+
+/* PHOTO CARD */
 
 .photo-card{
     width:100%;
 
-    margin:0 auto 60px;
-
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
 }
 
 
-/*
-    PHOTO FRAME
-
-    Change max-width if you want the photograph
-    larger or smaller.
-*/
+/* PHOTO FRAME */
 
 .photo-frame{
     width:100%;
-    max-width:820px;
 
-    padding:14px;
+    padding:12px;
 
     background:rgba(255,249,241,.92);
 
@@ -161,25 +171,19 @@ body::before{
 }
 
 
-/* OPTIONAL HOVER */
+/* HOVER */
 
 .photo-frame img:hover{
     transform:scale(1.01);
 }
 
 
-/*
-    CAPTION PANEL
-
-    This sits directly underneath the photograph
-    and uses the same background treatment as the
-    original "paper" section.
-*/
+/* =================================================
+   OPTIONAL CAPTION
+   ================================================= */
 
 .caption-box{
     width:calc(100% - 40px);
-
-    max-width:760px;
 
     margin-top:0;
 
@@ -201,8 +205,6 @@ body::before{
 }
 
 
-/* CAPTION TEXT */
-
 .caption{
     font-size:1.15rem;
 
@@ -216,13 +218,6 @@ body::before{
 }
 
 
-/*
-    If you don't want a caption,
-    simply delete the .caption-box from
-    the HTML for that photograph.
-*/
-
-
 /* RETURN HOME */
 
 .back{
@@ -230,7 +225,7 @@ body::before{
 
     text-align:center;
 
-    margin-top:35px;
+    margin-top:60px;
 
     color:#f5ead1;
 
@@ -246,7 +241,9 @@ body::before{
 }
 
 
-/* MOBILE */
+/* =================================================
+   MOBILE
+   ================================================= */
 
 @media(max-width:700px){
 
@@ -255,7 +252,15 @@ body::before{
     }
 
     .page-title{
-        margin-bottom:20px;
+        margin-bottom:30px;
+    }
+
+    /* ONE COLUMN ON PHONES */
+
+    .photo-grid{
+        grid-template-columns:1fr;
+
+        gap:35px;
     }
 
     .photo-frame{
@@ -289,208 +294,216 @@ body::before{
 
 
 <!-- =================================================
-     PHOTOS
+     PHOTO GRID
      ================================================= -->
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic0.JPG" alt="">
+<div class="photo-grid">
+
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic0.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic3_2.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic3_2.JPG" alt="">
+        </div>
     </div>
-</div>
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic3_111.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic3_111.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic40.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic40.JPG" alt="">
+        </div>
     </div>
-</div>
-    
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic4_11.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic4_11.JPG" alt="">
+        </div>
     </div>
-</div>
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic3_1.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic3_1.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic4.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic4.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic5.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic5.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic1.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic1.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic2.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic2.JPG" alt="">
+        </div>
     </div>
-</div>
 
-    
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic39.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic39.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic7.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic7.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic8.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic8.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic18.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic18.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic20.jpeg" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic20.jpeg" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic21.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic21.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic22.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic22.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic26.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic26.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic27.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic27.JPG" alt="">
+        </div>
     </div>
-</div>
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic31.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic31.JPG" alt="">
+        </div>
     </div>
-</div>
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic32.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic32.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic36.jpeg" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic36.jpeg" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic37.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic37.JPG" alt="">
+        </div>
     </div>
-</div>
 
-    
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic38.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic38.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic39.JPG" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic39.JPG" alt="">
+        </div>
     </div>
-</div>
 
 
-
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic45.jpeg" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic45.jpeg" alt="">
+        </div>
     </div>
-</div>
 
 
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic49.jpeg" alt="">
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic49.jpeg" alt="">
+        </div>
     </div>
-</div>
 
-    
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic53.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic53.JPG" alt="">
+        </div>
     </div>
-</div>
 
-    
-<div class="photo-card">
-    <div class="photo-frame">
-        <img src="pic43.JPG" alt="">
+
+    <div class="photo-card">
+        <div class="photo-frame">
+            <img src="pic43.JPG" alt="">
+        </div>
     </div>
-</div>
 
+
+</div>
 
 
 <a href="index.html" class="back">
