@@ -79,8 +79,6 @@ body::before{
     transform:rotate(-1deg);
 }
 
-
-
 .poem-paper{
 
     width:min(760px,100%);
@@ -97,9 +95,7 @@ body::before{
         inset 0 0 0 1px rgba(183,143,82,.18);
 
     backdrop-filter:blur(2px);
-
 }
-
 
 .poem{
 
@@ -113,6 +109,12 @@ body::before{
 
     color:#5b4334;
 
+    font-style:normal;
+}
+
+.definition{
+    font-style:italic;
+    margin-bottom:1em;
 }
 
 .back{
@@ -132,32 +134,22 @@ body::before{
     text-decoration:none;
 
     transition:.3s;
-
 }
 
 .back:hover{
-
     opacity:.7;
-
 }
 
 @media (max-width:700px){
 
 .poem-paper{
-
-padding:28px 28px;
-
+    padding:28px 28px;
 }
 
 .poem{
-
-font-size:1.1rem;
-
-line-height:1.2;
-
+    font-size:1.1rem;
+    line-height:1.2;
 }
-
-
 
 }
 
@@ -172,14 +164,14 @@ line-height:1.2;
 August Gives Me Zugunruhe
 </h1>
 
-
 <div class="poem-paper">
 
-
-
 <div class="poem">
-<em>Zugunruhe [Tsook-oon-roo-uh]: The migratory condition my psychiatrist didn’t consider.<em>
-    
+
+<div class="definition">
+Zugunruhe [Tsook-oon-roo-uh]: The migratory condition my psychiatrist didn’t consider.
+</div>
+
 The end of July,
 Dirt hot and alive,
 Cornflower-blue sky,
@@ -197,6 +189,7 @@ I’m also a raptor.
 
 Strange feeling I knew:
 August zugunruhe.
+
 </div>
 
 </div>
