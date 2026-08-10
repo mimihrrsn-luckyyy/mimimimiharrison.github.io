@@ -40,6 +40,22 @@ body::before{
     pointer-events:none;
 }
 
+/* Name in top-left corner */
+.name{
+    position:fixed;
+    top:22px;
+    left:28px;
+    z-index:10;
+
+    font-family:"Pinyon Script", cursive;
+    font-size:1.7rem;
+    color:#fff3d2;
+    opacity:.9;
+
+    text-shadow:
+        1px 1px 3px rgba(70,45,20,.3);
+}
+
 .wrapper{
     width:min(1200px,95%);
     margin:auto;
@@ -166,6 +182,8 @@ body::before{
 </head>
 
 <body>
+
+<div class="name">Mimi Harrison</div>
 
 <div class="wrapper">
 
